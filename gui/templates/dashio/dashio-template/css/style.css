@@ -3511,5 +3511,5 @@ ul.chat-available-user li a:hover {
 hr.testcase-step-splitter{
     margin-top: 3px;
     margin-bottom: 3px;
-    color:#3333ff;
+    border-top: 1px solid #8888ff;
 }
