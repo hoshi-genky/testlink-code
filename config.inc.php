@@ -715,10 +715,10 @@ $tlCfg->gui->codeTrackerView->itemQtyForTopButton = 10;
 $tlCfg->gui->op_area_display = new stdClass();
 
 // test_spec_container => test project, test suite
-$tlCfg->gui->op_area_display->test_spec_container = 'none'; // ''
-$tlCfg->gui->op_area_display->test_case = 'none'; // 'inline'
-$tlCfg->gui->op_area_display->req_spec_container = 'none'; // 'inline'
-$tlCfg->gui->op_area_display->req = 'none'; // 'inline'
+$tlCfg->gui->op_area_display->test_spec_container = 'block'; // ''
+$tlCfg->gui->op_area_display->test_case = 'block'; // 'inline'
+$tlCfg->gui->op_area_display->req_spec_container = 'block'; // 'inline'
+$tlCfg->gui->op_area_display->req = 'block'; // 'inline'
 
 
 
