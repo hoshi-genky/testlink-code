@@ -3484,3 +3484,9 @@ ul.chat-available-user li a:hover {
 #copyrights a {
   color: #fff;
 }
+
+hr.testcase-step-splitter{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color:#3333ff;
+}

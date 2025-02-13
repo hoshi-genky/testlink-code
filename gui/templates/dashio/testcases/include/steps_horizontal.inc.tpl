@@ -150,7 +150,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
         {else}
         <td colspan=5>
         {/if}
-        <hr align="center" width="100%" color="grey" size="1">
+        <hr align="center" width="100%" class="testcase-step-splitter">
         </td>
       </tr>
     {/if}
