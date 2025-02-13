@@ -16,8 +16,8 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     {$inExec = 0}
   {/if}  
 
-  <tr>
-    <th width="40px"><nobr>
+  <tr class="testcase-header">
+    <th width="50px"><nobr>
     {if $edit_enabled && $steps != '' && !is_null($steps) && $args_frozen_version=="no"}
       <img class="clickable" src="{$tlImages.reorder}" align="left"
            title="{$inc_steps_labels.show_hide_reorder}"
@@ -32,7 +32,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     </th>
     <th>{$inc_steps_labels.expected_results}</th>
     {if $gui->tprojOpt->automationEnabled}
-    <th width="25">{$inc_steps_labels.execution_type_short_descr}</th>
+    <th width="60px">{$inc_steps_labels.execution_type_short_descr}</th>
     {/if}
     {if $edit_enabled}
     <th>&nbsp;</th>
