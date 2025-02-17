@@ -188,6 +188,7 @@
         return queries;
     }
     queries = getUrlQueries();
+    console.log(queries);
     if(parseInt(queries["debug"])>0){
         _smarty_console = window.open("", "console{$id}", "width=1024,height=600,left={$offset},top={$offset},resizable,scrollbars=yes");
         _smarty_console.document.write("{$debug_output|escape:'javascript' nofilter}");
