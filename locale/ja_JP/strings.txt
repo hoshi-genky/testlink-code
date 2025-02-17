@@ -781,6 +781,7 @@ $TLS_node_type_dbtable_testcases = $TLS_testcase;
 // ----- gui/templates/containerView.tpl -----
 $TLS_testsuite_operations = "テストスイート操作";
 $TLS_testcase_operations = "テストケース操作";
+$TLS_testcase_version_operation = "バージョン編集"
 $TLS_alt_del_testsuite = "このテストスイートを削除";
 $TLS_alt_edit_testsuite = "このテストスイートのデータとタイトルを修正";
 $TLS_alt_move_cp_testsuite = "このテストスイートを他のテストプロジェクトに移動またはコピー";
