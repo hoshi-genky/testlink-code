@@ -35,8 +35,8 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     <th width="70px">{$inc_steps_labels.execution_type_short_descr}</th>
     {/if}
     {if $edit_enabled}
-    <th>&nbsp;</th>
-    <th>&nbsp;</th>
+    <th width="40px">削除</th>
+    <th width="40px">追加</th>
     {/if}
 
     {if $inExec}
