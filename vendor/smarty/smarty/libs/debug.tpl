@@ -169,7 +169,28 @@
 <script type="text/javascript">
     {$id = '__Smarty__'}
     {if $display_mode}{$id = "$offset$template_name"|md5}{/if}
-    _smarty_console = window.open("", "console{$id}", "width=1024,height=600,left={$offset},top={$offset},resizable,scrollbars=yes");
-    _smarty_console.document.write("{$debug_output|escape:'javascript' nofilter}");
-    _smarty_console.document.close();
+    function getUrlQueries() {
+        var queryStr = window.location.search.slice(1);  // 文頭?を除外
+            queries = {};
+            
+        // クエリがない場合は空のオブジェクトを返す
+        if (!queryStr) {
+            return queries;
+        }
+        
+        // クエリ文字列を & で分割して処理
+        queryStr.split('&').forEach(function(queryStr) {
+            // = で分割してkey,valueをオブジェクトに格納
+            var queryArr = queryStr.split('=');
+            queries[queryArr[0]] = queryArr[1];
+        });
+        
+        return queries;
+    }
+    queries = getUrlQueries();
+    if(parseInt(queries["debug"])>0){
+        _smarty_console = window.open("", "console{$id}", "width=1024,height=600,left={$offset},top={$offset},resizable,scrollbars=yes");
+        _smarty_console.document.write("{$debug_output|escape:'javascript' nofilter}");
+        _smarty_console.document.close();
+    }
 </script>
