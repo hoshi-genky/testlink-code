@@ -505,7 +505,7 @@ table.tableruler tbody tr:hover{
 /* Used for filters and options settings */
 table.smallGrey {
 	border: 		1px solid black;
-	font-size:		smaller;
+	font-size:		normal;
 	margin-bottom:	10px;
 	margin-right:	0px;
 }
