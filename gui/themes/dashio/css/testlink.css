@@ -1157,5 +1157,16 @@ div.form-border {
 	float :left;
 }
 
-
+/* step edit*/
+td.clickable_edit{
+    background-color: #FFF2BA;
+    padding-left: 5px;
+    padding-right: 3px;
+}
+td.clickable_edit:hover{
+    background-color: #ffff88;
+}
+body.testlink .cke_editable{
+	padding-left: 5px;
+}
 /* ----- END ------------------------------------------------------------------------- */
