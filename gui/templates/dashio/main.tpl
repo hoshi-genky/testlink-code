@@ -14,7 +14,7 @@
   <link href="{$dashioHome}img/apple-touch-icon.png" 
         rel="apple-touch-icon">
 
-  <script type="text/javascript" src="{$basehref}{$smarty.const.TL_JQUERY}" language="javascript"></script>
+  <script src="{$basehref}{$smarty.const.TL_JQUERY}" ></script>
   <link href="{$dashioHome}lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="{$fontawesomeHomeURL}/css/all.css" rel="stylesheet" />
 
