@@ -221,7 +221,7 @@ hr {
 
 ul.top-menu > li > .logout {
 	color: #f2f2f2;
-	font-size: 12px;
+	font-size: 15px;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border: 1px solid #64c3c2 !important;
@@ -551,7 +551,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 
 .dropdown-menu.extended li a {
     border-bottom: 1px solid #EBEBEB !important;
-    font-size: 12px;
+    font-size: 15px;
     list-style: none;
 }
 
@@ -598,7 +598,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .dropdown-menu.inbox li a .subject .from {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -1231,7 +1231,7 @@ PANELS CONFIGURATIONS
 	font-weight: 700;
 }
 .message-p .message {
-	font-size: 12px;
+	font-size: 15px;
 }
 .message-p .form-inline {
 	margin-left: 10px;
@@ -1396,7 +1396,7 @@ PANELS CONFIGURATIONS
 	margin-left: 8px;
 	margin-right: 8px;
 	margin-top: 15px;
-	font-size: 12px;
+	font-size: 15px;
 }
 
 /* Calendar Configuration */
@@ -1606,11 +1606,11 @@ PANELS CONFIGURATIONS
 }
 .panel.terques-chart .chart-tittle .value a {
     color: #2f2f2f;
-    font-size: 12px;
+    font-size: 15px;
 }
 .panel.terques-chart .chart-tittle .value a:hover, .panel.terques-chart .chart-tittle .value a.active {
     color: #4ECDC4;
-    font-size: 12px;
+    font-size: 15px;
 }
 .panel.terques-chart .chart-tittle {
     font-size: 16px;
@@ -2373,7 +2373,7 @@ ul.my-friends li .friends-pic {
     color:#fff;
 }
 .user-head .user-name span a {
-    font-size:12px;
+    font-size:15px;
     color:#87e2e7;
 }
 a.mail-dropdown {
@@ -3299,7 +3299,7 @@ ul.chat-available-user li a:hover {
 }
 #sortable li {
     padding-left: 3em;
-    font-size: 12px;
+    font-size: 15px;
 }
 #sortable li i {
     position: absolute;
