@@ -84,16 +84,18 @@
 
             {if $gui->user_self_signup}
               <div class="registration">
-                <a class="" href="firstLogin.php?viewer=new" id="tl_sign_up">
+                <p><a class="" href="firstLogin.php?viewer=new" id="tl_sign_up">
                   {$labels.new_user_q}
-                </a>
+                </a></p>
 
                 {* the configured authentication method don't allow 
                    users to reset his/her password *}    
                 {if $gui->external_password_mgmt eq 0 && $tlCfg->demoMode eq 0}
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <p>
                   <a href="lostPassword.php?viewer=new" id="tl_lost_password">
                   {$labels.lost_password_q}</a>
+                  </p>
                 {/if}
               </div>
             {/if}

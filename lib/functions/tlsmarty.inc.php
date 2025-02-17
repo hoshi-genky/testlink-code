@@ -134,7 +134,7 @@ class TLSmarty extends Smarty {
     $testprojectColor = $tlCfg->gui->background_color ; 
     $this->assign('testprojectColor', $testprojectColor);
     
-    
+    $this->debugging = false;
     if ($tlCfg->smarty_debug) {
       $this->debugging = true;
       tLog("Smarty debug window = ON");
