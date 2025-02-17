@@ -449,7 +449,7 @@ table.common {
 table.common th, table.simple th, table.simple_tableruler th{
   	overflow:		hidden;
   	color:			#15428b;
-  	font:			bold 11px tahoma,arial,verdana,sans-serif;
+  	font:			bold 14px tahoma,arial,verdana,sans-serif;
   	padding:		5px 3px 4px 5px;
   	border:			1px solid #99bbe8;
   	line-height:	15px;
@@ -921,7 +921,7 @@ input.tl-input{
 table.mainTable-x th {
   overflow:hidden;
   color:#15428b;
-  font:bold 11px tahoma,arial,verdana,sans-serif;
+  font:bold 14px tahoma,arial,verdana,sans-serif;
   padding:5px 3px 4px 5px;
   border:1px solid #99bbe8;
   line-height:15px;

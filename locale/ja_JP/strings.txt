@@ -1006,7 +1006,7 @@ $TLS_link_results_import = "結果の取り込み";
 
 // gui/templates/cfields/cfieldsView.tpl
 $TLS_btn_cfields_create = $TLS_btn_create;
-$TLS_manage_cfield = "カスタムフィールドの管理";
+$TLS_manage_cfield = "カスタムフィールド管理";
 
 
 // cfieldsExport.php

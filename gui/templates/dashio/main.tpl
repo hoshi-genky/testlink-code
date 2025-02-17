@@ -14,6 +14,7 @@
   <link href="{$dashioHome}img/apple-touch-icon.png" 
         rel="apple-touch-icon">
 
+  <script type="text/javascript" src="{$basehref}{$smarty.const.TL_JQUERY}" language="javascript"></script>
   <link href="{$dashioHome}lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="{$fontawesomeHomeURL}/css/all.css" rel="stylesheet" />
 
@@ -36,10 +37,6 @@
            style="display: block;" class="siteContent">
    </iframe>
   </section>
-
-  <script type="text/javascript" 
-          src="{$basehref}{$smarty.const.TL_JQUERY}"
-          language="javascript"></script>
 
   {$bs = "{$dashioHome}lib/"}
   <!-- 
