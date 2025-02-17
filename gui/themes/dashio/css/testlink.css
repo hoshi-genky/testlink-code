@@ -1030,7 +1030,7 @@ th.testlink, td.testlink, tr.testlink td {
 /* Taken from Ext JS, and adapted */
 
 .x-tl-panel{border-style:solid;border-color:#99bbe8;border-width:0;}
-.x-tl-panel-header{overflow:hidden;color:#15428b;font:bold 11px tahoma,arial,verdana,sans-serif;
+.x-tl-panel-header{overflow:hidden;color:#15428b;font:bold 14px tahoma,arial,verdana,sans-serif;
                    padding:2px 1px 1px 2px;border:1px solid #99bbe8;line-height:15px;
                    background:transparent url(../images/white-top-bottom.gif) repeat-x 0 -1px;}
 .x-tl-panel-body{border:1px solid #99bbe8;border-top:0 none;overflow:hidden;background:white;}
@@ -1040,7 +1040,7 @@ th.testlink, td.testlink, tr.testlink td {
                                                                           border-bottom:0 none;}
 .x-tl-panel-body-noheader,.x-tl-panel-mc .x-tl-panel-body{border-top:1px solid #99bbe8;}
 .x-tl-panel-header{overflow:hidden;}
-.x-tl-panel-tl .x-tl-panel-header{color:#15428b;font:bold 11px tahoma,arial,verdana,sans-serif;
+.x-tl-panel-tl .x-tl-panel-header{color:#15428b;font:bold 14px tahoma,arial,verdana,sans-serif;
                                padding:5px 0 4px 0;border:0 none;background:transparent;}
 .x-tl-panel-tl .x-tl-panel-icon,.x-window-tl .x-tl-panel-icon{padding-left:20px!important;background-repeat:no-repeat;
                                                         background-position:0 4px;}
@@ -1056,7 +1056,7 @@ th.testlink, td.testlink, tr.testlink td {
                padding-left:6px;}
 .x-tl-panel-br{background:transparent url(../images/corners-sprite.gif) no-repeat right bottom;
                padding-right:6px;}
-.x-tl-panel-mc{border:0 none;padding:0;margin:0;font:normal 11px tahoma,arial,helvetica,sans-serif;
+.x-tl-panel-mc{border:0 none;padding:0;margin:0;font:normal 14px tahoma,arial,helvetica,sans-serif;
                padding-top:6px;background:#dfe8f6;}
 .x-tl-panel-mc .x-tl-panel-body{background:transparent;border:0 none;}
 .x-tl-panel-ml{background:#fff url(../images/left-right.gif) repeat-y 0 0;padding-left:6px;}
