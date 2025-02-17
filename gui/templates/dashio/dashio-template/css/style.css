@@ -179,6 +179,10 @@ hr {
 .centered {
 	text-align: center;
 }
+.lefted {
+	margin-left: 10px;
+}
+
 
 .goleft {
 	text-align: left;

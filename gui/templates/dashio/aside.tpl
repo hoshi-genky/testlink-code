@@ -10,8 +10,8 @@ Left side menu
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p ><img src="{$gui->logo}"></p>
-          <h4 ><a href="{$gui->userInfo}">{$gui->whoami}</a></h4>
+          <p class="lefted"><img src="{$gui->logo}"></p>
+          <h4 class="lefted"><a href="{$gui->userInfo}">{$gui->whoami}</a></h4>
           {if $gui->showMenu != null}
             {if $gui->showMenu.dashboard == true}
             <li class="mt">
