@@ -25,7 +25,7 @@ View test specification containers
      btn_gen_test_suite_spec,btn_gen_test_suite_spec_new_window,
      btn_export_testsuite, btn_export_all_testsuites, 
      btn_import_testsuite,btn_new_tc,btn_move_cp_testcases, btn_import_tc, btn_export_tc, th_testplan_name,
-     testsuite_operations,testcase_operations,
+     testsuite_operations,testcase_operations,testcase_version_operations,
      btn_create_from_issue_xml,file_upload_ko'}
 
 {$ft=''}
