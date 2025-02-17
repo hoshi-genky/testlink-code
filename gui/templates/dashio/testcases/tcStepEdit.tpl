@@ -221,9 +221,9 @@ var tc_editor = "{$gui->editorType}";
           </td>
           {/if}
       {else}
-        <td style="text-align:left;" onclick="buildURL('step_number-{$step_info.id}');"><a id="step_number-{$step_info.id}" href="">{$step_info.step_number}</a></td>
-        <td onclick="buildURL('step_actions-{$step_info.id}');"><a id="step_actions-{$step_info.id}" href="">{$step_info.actions}</a></td>
-        <td onclick="buildURL('step_expected-{$step_info.id}');"><a id="step_expected-{$step_info.id}" href="">{$step_info.expected_results}</a></td>
+        <td class="clickable_edit" style="text-align:left;" onclick="buildURL('step_number-{$step_info.id}');"><a id="step_number-{$step_info.id}" href="">{$step_info.step_number}</a></td>
+        <td class="clickable_edit" onclick="buildURL('step_actions-{$step_info.id}');"><a id="step_actions-{$step_info.id}" href="">{$step_info.actions}</a></td>
+        <td class="clickable_edit" onclick="buildURL('step_expected-{$step_info.id}');"><a id="step_expected-{$step_info.id}" href="">{$step_info.expected_results}</a></td>
         {if $gui->tprojOpt->automationEnabled}
           <td onclick="buildURL('step_exec_type-{$step_info.id}');"><a id="step_exec_type-{$step_info.id}" href="">{$gui->execution_types[$step_info.execution_type]}</a></td>
         {/if}  
