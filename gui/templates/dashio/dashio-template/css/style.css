@@ -21,7 +21,7 @@ body {
     font-family: 'Ruda', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
-    font-size:13px;
+    font-size:16px;
 }
 
 ul li {
@@ -567,14 +567,14 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .dropdown-menu.tasks-bar .task-info .desc {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: normal;
 }
 
 .dropdown-menu.tasks-bar .task-info .percent {
     display: inline-block;
     float: right;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     padding-left: 10px;
     margin-top: -4px;
@@ -1377,7 +1377,7 @@ PANELS CONFIGURATIONS
 	width: 70px;
 	height: 70px;
 	line-height: 70px;
-	font-size: 13px;
+	font-size: 16px;
 	color: #fff;
 	text-align: center;
 	border-radius: 100%;
@@ -2081,7 +2081,7 @@ profile-text p {
 
 .panel-heading .nav {
 	border: medium none;
-	font-size: 13px;
+	font-size: 16px;
 	margin-left: 0px;
 	margin-right: 0px;
 	text-transform: uppercase;
@@ -2175,7 +2175,7 @@ ul.my-friends li .friends-pic {
 	border: none;
 }
 .well.well-small {
-	padding: 13px;
+	padding: 16px;
 	width: auto;
 }
 .invoice-body {
@@ -2235,7 +2235,7 @@ ul.my-friends li .friends-pic {
 .pricing {list-style:none; padding:10px 0 20px;}
 .pricing li {
 	border-bottom: 1px solid #DCDBD7;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: 100;
 	line-height: 34px;
 	margin: 0 auto;
@@ -3426,7 +3426,7 @@ ul.chat-available-user li a:hover {
   color: red;
   margin: 0 0 15px 0;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .contact-form .loading {
