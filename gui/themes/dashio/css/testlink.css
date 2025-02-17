@@ -1166,7 +1166,5 @@ td.clickable_edit{
 td.clickable_edit:hover{
     background-color: #ffff88;
 }
-body.testlink .cke_editable{
-	padding-left: 5px;
-}
+
 /* ----- END ------------------------------------------------------------------------- */
