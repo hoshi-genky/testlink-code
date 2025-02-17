@@ -264,7 +264,7 @@ div.groupBtn {
 }
 
 div.vertical_menu {
-	font-size:      90%;
+	font-size:      120%;
 	margin: 		3px;
 	padding: 		2px;
 	padding-bottom:	1px;
@@ -482,7 +482,7 @@ table.common caption, table.smallGrey caption {
 /* ***** Simple Table (often used to show data) ***************** */
 table.simple, table.simple_tableruler {
 	/*border: 		thin solid black;*/
-	font-size:		90%;
+	font-size:		120%;
 	margin:			5px;
 	width:			99%;
 }
@@ -513,7 +513,7 @@ table.smallGrey {
 
 table.no-border {
 	border: 		0px none;
-	font-size:		90%;
+	font-size:		120%;
 	margin:			5px 0px;
 	width:			auto;
 }
@@ -544,7 +544,7 @@ table.link_and_exec th {
 /* *****  Table Execution History ********* */
 table.exec_history {
 	border: 		thin solid black;
-	font-size:		90%;
+	font-size:		120%;
 	margin:			20px;
 	width:			95%;
 }
