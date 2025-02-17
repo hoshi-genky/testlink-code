@@ -350,7 +350,7 @@ ul.sidebar-menu li ul.sub li.active a {
 ul.sidebar-menu li{
     /*line-height: 20px !important;*/
     margin-bottom: 5px;
-    margin-left:10px;
+    margin-left:5px;
     margin-right:10px;
 }
 
@@ -367,7 +367,7 @@ ul.sidebar-menu li a{
     text-decoration: none;
     display: block;
     padding: 15px 0 15px 10px;
-    font-size: 12px;
+    font-size: 16px;
     outline: none;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
