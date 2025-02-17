@@ -61,7 +61,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
 
   {foreach from=$steps item=step_info}
   <tr id="step_row_{$step_info.step_number}">
-    <td style="text-align:left;">
+    <td style="text-align:center;" class="step_order">
       <span class="order_info" style='display:none'>
       {if $edit_enabled && $args_frozen_version=="no"}
         <input type="text" class="step_number{$args_testcase.id}" name="step_set[{$step_info.id}]" id="step_set_{$step_info.id}"
