@@ -73,11 +73,11 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
       </span>
       {$step_info.step_number}
     </td>
-    <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" onclick="launchEditStep({$step_info.id})" {/if}>{if $gui->stepDesignEditorType == 'none'}{$step_info.actions|nl2br}{else}{$step_info.actions}{/if}
+    <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" class="clickable_edit" onclick="launchEditStep({$step_info.id})" {/if}>{if $gui->stepDesignEditorType == 'none'}{$step_info.actions|nl2br}{else}{$step_info.actions}{/if}
     </td>
-    <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" onclick="launchEditStep({$step_info.id})" {/if}>{if $gui->stepDesignEditorType == 'none'}{$step_info.expected_results|nl2br}{else}{$step_info.expected_results}{/if}</td>
+    <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" class="clickable_edit" onclick="launchEditStep({$step_info.id})" {/if}>{if $gui->stepDesignEditorType == 'none'}{$step_info.expected_results|nl2br}{else}{$step_info.expected_results}{/if}</td>
     {if $gui->tprojOpt->automationEnabled}
-    <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" onclick="launchEditStep({$step_info.id})" {/if}>{$gui->execution_types[$step_info.execution_type]}</td>
+    <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" class="clickable_edit" onclick="launchEditStep({$step_info.id})" {/if}>{$gui->execution_types[$step_info.execution_type]}</td>
     {/if}
 
     {if $edit_enabled && $args_frozen_version=="no"}
