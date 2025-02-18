@@ -19,7 +19,7 @@ html, body {
 body, body.testlink {
 	background-color: #eaeaea !important;
 	font-family: 	'Ruda', sans-serif;
-	font-size: 		small;
+	font-size: 		medium;
 	margin:			0px;
 	padding:		0px;
 	height:100%;
@@ -298,7 +298,7 @@ fieldset.groupBtn {
 }
 
 fieldset.groupBtn h2 {
-	font-size: 10pt;
+	font-size: 14pt;
 	display: block;
 	margin: 0 0 0 -1em;
 	padding: 0;
@@ -505,7 +505,7 @@ table.tableruler tbody tr:hover{
 /* Used for filters and options settings */
 table.smallGrey {
 	border: 		1px solid black;
-	font-size:		normal;
+	font-size:		medium;
 	margin-bottom:	10px;
 	margin-right:	0px;
 }
@@ -1107,7 +1107,7 @@ th.testlink, td.testlink, tr.testlink td {
 /* To adjust Bootstrap tables */
 /* I think it's not necesseray. Better view without font-size **/
 .table {
-  font-size: 12px;
+  font-size: 16px;
   width: 100%;
 }
 

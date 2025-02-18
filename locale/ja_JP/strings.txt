@@ -3262,7 +3262,7 @@ $TLS_show_closed_builds_btn = "クローズしたテストケースも表示";
 
 
 // ----- lib/testcases/tcCreatedPerUser.php -----
-$TLS_link_report_test_cases_created_per_user = "作成者でテストケースを検索"; // "Test Cases created per User";
+$TLS_link_report_test_cases_created_per_user = "作成者で検索"; // "Test Cases created per User";
 $TLS_testcases_created_per_user = 'テストプロジェクト: %s - ' . $TLS_link_report_test_cases_created_per_user;
 
 
