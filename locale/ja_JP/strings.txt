@@ -4208,6 +4208,16 @@ $TLS_search_items = "検索";
 $TLS_req_document_id = "要件文書ID";
 $TLS_id = 'ID';
 
+$TLS_search = "検索";
+$TLS_advanced_search = "詳細検索";
+$TLS_quick_search = "クイック検索";
+$TLS_projects = 'プロジェクト';
+$TLS_system = 'システム';
+$TLS_tests_design = 'テストケース設計';
+$TLS_requirements_design = '要件 設計';
+$TLS_testcase_execution = 'テストケース 実施';
+
+
 $TLS_search_words_or = '検索が、少なくとも単語に一致する必要があります (または)';
 $TLS_search_words_and = '検索が、すべての単語に一致する必要があります (かつ)';
 $TLS_search_words_placeholder = '検索したい単語をここに入力';
