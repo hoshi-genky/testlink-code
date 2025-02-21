@@ -1411,8 +1411,13 @@ class tlUser extends tlDBObject {
     }
     
     if ($doExit){   
-      redirect($_SESSION['basehref'],"top.location");
-      exit();
+      print("checkGUISecurityClearance Error!<br>");
+      print_r($myContext);
+      if($myContext['tproject_id'] == 0){
+        print("<h3>tproject_id is 0!</h3>");
+      }
+      //redirect($_SESSION['basehref'],"top.location");
+      //exit();
     }
   }
 
