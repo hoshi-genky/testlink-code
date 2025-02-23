@@ -78,7 +78,13 @@ editorType: used to understand if code for tinymce need to be loaded
 	var printPreferences = '{$printPreferences}';
 	var tproject_id = '{$tproject_id}';
 	var tplan_id = '{$tplan_id}';
-	
+
+	find = location.href.indexOf("?");
+	if(find>0){
+		args += "&" + location.href.substring(find+1);
+	}
+	console.log("args=" + args);
+
 	// To solve problem diplaying help
 	var SP_html_help_file  = '{$SP_html_help_file}';
 	
