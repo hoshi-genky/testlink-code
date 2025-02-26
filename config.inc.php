@@ -24,6 +24,8 @@
  *
  **/
 
+ ini_set( 'display_errors', 1 ); 
+
 // ----------------------------------------------------------------------------
 /* [INITIALIZATION] - DO NOT CHANGE THE SECTION */
 
