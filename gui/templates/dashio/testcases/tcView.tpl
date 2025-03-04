@@ -141,7 +141,7 @@ function validateFormEstimatedExecDuration(the_form)
     </i>
     
 
-      <div class="direct_link" style='display:none'><a href="{$gui->direct_link}" target="_blank">{$gui->direct_link}</a></div>
+      <div class="direct_link" style='display:block'><a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}')">{$gui->direct_link}</a></div>
 
       {include file="{$tplConfig['tcViewViewer.inc']}"  
               args_aliens_map = $gui->currentVersionAliens

@@ -101,7 +101,7 @@ Purpose: view a requirement specification
 
 <div class="workBack">
   {if isset($gui->direct_link)}
-    <div class="direct_link" style='display:none'><a href="{$gui->direct_link}" target="_blank">{$gui->direct_link}</a></div>
+    <div class="direct_link" style='display:block'><a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}')">{$gui->direct_link}</a></div>
   {/if}
 {if $gui->req_spec.id}
 <img class="clickable" src="{$tlImages.cog}" onclick="javascript:toogleShowHide('control_panel');"

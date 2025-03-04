@@ -37,8 +37,8 @@ viewer for requirement
   {$tlImages.toggle_direct_link} &nbsp;
   <h2>{$labels.requirement} {$args_req.title|escape} </h2>
 
-  <div class="direct_link" style='display:none'>
-    <a href="{$gui->direct_link}&version={$args_req.version}" target="_blank">{$labels.specific_direct_link}</a><br/>
+  <div class="direct_link" style='display:block'>
+    <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}&version={$args_req.version}')">{$labels.specific_direct_link}</a><br/>
   </div>
 {/if}
 

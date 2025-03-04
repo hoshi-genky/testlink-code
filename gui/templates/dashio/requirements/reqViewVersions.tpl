@@ -289,7 +289,7 @@ var {$gui->dialogName} = new std_dialog('&refreshTree');
     {if !$gui->show_title }
       {$gui->current_version[idx][0].req_doc_id|escape}:{$gui->current_version[idx][0].title|escape}</h2>
     {/if}
-    <div class="direct_link" style='display:none'>
+    <div class="direct_link" style='display:block'>
     <a href="{$gui->direct_link}" target="_blank">{$labels.current_direct_link}</a><br/>
     <a href="{$gui->direct_link}&version={$gui->current_version[idx][0].version}" target="_blank">{$labels.specific_direct_link}</a><br/>
     </div>

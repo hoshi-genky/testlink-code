@@ -41,9 +41,9 @@ Ext.onReady(function() {ldelim}
 <h1 class="title">{$labels.testproject} {$smarty.const.TITLE_SEP} {$gui->tproject_name|escape}</h1>
 <div class="workBack">
 {$tlImages.toggle_direct_link} &nbsp;&nbsp;
-<div class="direct_link" style='display:none'>
+<div class="direct_link" style='display:block'>
 {if $gui->direct_link_ok}  
-  <a href="{$gui->direct_link}" target="_blank">{$gui->direct_link}</a>
+  <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}')">{$gui->direct_link}</a>
 {else}
   {$gui->direct_link}
 {/if}
