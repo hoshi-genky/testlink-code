@@ -244,7 +244,9 @@ file_upload_ko,pleaseOpenTSuite'}
       <img class="clip" src="{$tlImages.clipboard}" title="eye" 
            data-clipboard-text="{$gui->direct_link}">
       <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}')">
-      {$gui->direct_link}</a></div>
+      {$gui->direct_link}</a>
+      <span class="tooltip-text">コピー</span>
+      </div>
 
       
       <input class="{#BUTTON_CLASS#}" type="button" 

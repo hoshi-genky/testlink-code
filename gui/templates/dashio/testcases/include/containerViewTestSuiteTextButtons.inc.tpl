@@ -8,6 +8,7 @@
  
   <div class="direct_link" style='display:block'>
     <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}')">{$gui->direct_link}</a>
+    <span class="tooltip-text">コピー</span>
   </div>
 
   <div id="tsuite_control_panel" 

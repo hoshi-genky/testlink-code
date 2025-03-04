@@ -44,6 +44,7 @@ Ext.onReady(function() {ldelim}
 <div class="direct_link" style='display:block'>
 {if $gui->direct_link_ok}  
   <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}')">{$gui->direct_link}</a>
+  <span class="tooltip-text">コピー</span>
 {else}
   {$gui->direct_link}
 {/if}
