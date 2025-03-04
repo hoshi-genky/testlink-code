@@ -4216,6 +4216,7 @@ $TLS_system = 'システム';
 $TLS_tests_design = 'テストケース設計';
 $TLS_requirements_design = '要件 設計';
 $TLS_testcase_execution = 'テストケース 実施';
+$TLS_reports = 'テストレポート';
 
 
 $TLS_search_words_or = '検索が、少なくとも単語に一致する必要があります (または)';

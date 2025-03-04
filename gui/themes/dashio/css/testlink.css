@@ -1191,4 +1191,8 @@ td.clickable_edit:hover{
   div.direct_link{
 	display: inline-block;
   }
+/*トップメニュー*/
+  ul.sidebar-menu li ul.sub li a:hover{
+	background-color: #5edddf;
+  }
 /* ----- END ------------------------------------------------------------------------- */
