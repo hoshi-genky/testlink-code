@@ -41,7 +41,7 @@ Ext.onReady(function() {ldelim}
 <h1 class="title">{$labels.testproject} {$smarty.const.TITLE_SEP} {$gui->tproject_name|escape}</h1>
 <div class="workBack">
 {$tlImages.toggle_direct_link} &nbsp;&nbsp;
-<div class="direct_link" style='display:block'>
+<div class="direct_link" style='display:inline-block'>
 {if $gui->direct_link_ok}  
   <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}')">{$gui->direct_link}</a>
   <span class="tooltip-text">コピー</span>

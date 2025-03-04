@@ -37,7 +37,7 @@ viewer for requirement
   {$tlImages.toggle_direct_link} &nbsp;
   <h2>{$labels.requirement} {$args_req.title|escape} </h2>
 
-  <div class="direct_link" style='display:block'>
+  <div class="direct_link" style='display:inline-block'>
     <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}&version={$args_req.version}')">{$labels.specific_direct_link}</a>
     <span class="tooltip-text">コピー</span>
     <br/>

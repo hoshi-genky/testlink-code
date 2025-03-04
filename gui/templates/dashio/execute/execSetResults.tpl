@@ -240,7 +240,7 @@ file_upload_ko,pleaseOpenTSuite'}
              value="{$gui->history_on}" />
       
       {$tlImages.toggle_direct_link} &nbsp;
-      <div class="direct_link" style='display:block'>
+      <div class="direct_link" style='display:inline-block'>
       <img class="clip" src="{$tlImages.clipboard}" title="eye" 
            data-clipboard-text="{$gui->direct_link}">
       <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}')">
