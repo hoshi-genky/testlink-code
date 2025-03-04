@@ -1187,4 +1187,8 @@ td.clickable_edit:hover{
 	opacity: 1;
 	visibility: visible;
   }
+
+  div.direct_link{
+	display: inline-block;
+  }
 /* ----- END ------------------------------------------------------------------------- */
