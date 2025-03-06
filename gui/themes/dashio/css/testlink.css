@@ -1202,4 +1202,15 @@ td.td_label{
 	padding-right: 3px;
 	min-width: 70px;
 }
+tr.tr_param:first-child{
+	padding-top: 3px;
+}
+tr.tr_param{
+	border-bottom: 1px solid #bbb;
+}
+tr.tr_param:last-child{
+	border-bottom: 1px solid #000;
+	padding-bottom: 3px;
+}
+
 /* ----- END ------------------------------------------------------------------------- */
