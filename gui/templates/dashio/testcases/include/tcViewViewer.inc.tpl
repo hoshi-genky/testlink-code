@@ -128,7 +128,8 @@ viewer for test case in test specification
     {/if}
 
     <div style="display:{$tlCfg->gui->op_area_display->test_case};" 
-         id="tcView_viewer_tcase_control_panel_{$tcversion_id}">
+         id="tcView_viewer_tcase_control_panel_{$tcversion_id}" 
+         class="tcView_viewer_tcase_control_panel">
 
     {$allOpOnTCV = false}
     {if 'editOnExec' != $gui->show_mode && 
