@@ -243,7 +243,7 @@
 
     {if $control->filters.filter_tc_id}
       <tr>
-        <td>{$labels.th_tcid}</td>
+        <td class="label">{$labels.th_tcid}</td>
         <td><input type="text" name="filter_tc_id"
                                size="{#TC_ID_SIZE#}"
                                maxlength="{#TC_ID_MAXLEN#}"
@@ -254,7 +254,7 @@
 
     {if $control->filters.filter_testcase_name}
       <tr>
-        <td>{$labels.tc_title}</td>
+        <td class="label">{$labels.tc_title}</td>
         <td><input type="text" name="filter_testcase_name"
                                size="{#TC_TITLE_SIZE#}"
                                maxlength="{#TC_TITLE_MAXLEN#}"
@@ -265,7 +265,7 @@
 
     {if $control->filters.filter_toplevel_testsuite}
       <tr>
-          <td>{$labels.testsuite}</td>
+          <td class="label">{$labels.testsuite}</td>
           <td>
             <select class="chosen-select" name="filter_toplevel_testsuite">
               {html_options options=$control->filters.filter_toplevel_testsuite.items
@@ -277,7 +277,7 @@
 
     {if is_array($control->filters.filter_keywords) && count($control->filters.filter_keywords) > 0}
       <tr>
-        <td>{$labels.keyword}</td>
+        <td class="label">{$labels.keyword}</td>
         <td><select class="chosen-select" name="filter_keywords[]"
                     title="{$labels.keywords_filter_help}"
                     multiple="multiple"
@@ -298,7 +298,7 @@
     {if is_array($control->filters.filter_platforms) && count($control->filters.filter_platforms) > 0 && 
     isset($control->filters.filter_platforms.size)}
       <tr>
-        <td>{$labels.platforms}</td>
+        <td class="label">{$labels.platforms}</td>
         <td><select class="chosen-select" name="filter_platforms[]"
                     title=""
                     multiple="multiple"
@@ -315,7 +315,7 @@
     {* TICKET 4353: added filter for active/inactive test cases *}
     {if isset($control->filters.filter_active_inactive) && $control->filters.filter_active_inactive}
       <tr>
-        <td>{$labels.filter_active_inactive}</td>
+        <td class="label">{$labels.filter_active_inactive}</td>
           <td>
             <select name="filter_active_inactive">
                    {html_options options=$control->filters.filter_active_inactive.items
@@ -327,7 +327,7 @@
 
     {if $control->filters.filter_workflow_status}
       <tr>
-        <td>{$labels.status}</td>
+        <td class="label">{$labels.status}</td>
         <td>
           <select class="chosen-select" id="filter_workflow_status" 
           {if $control->advanced_filter_mode}
@@ -346,7 +346,7 @@
     {if is_array($control->filters.filter_importance) && 
         count($control->filters.filter_importance) > 0}
       <tr>
-        <td>{$labels.importance}</td>
+        <td class="label">{$labels.importance}</td>
         <td>
           <select class="chosen-select" id="filter_importance"
           {if $control->advanced_filter_mode}
@@ -364,7 +364,7 @@
             
     {if $control->filters.filter_priority}
       <tr>
-        <td>{$labels.priority}</td>
+        <td class="label">{$labels.priority}</td>
         <td>
           <select class="chosen-select" name="filter_priority">
           <option value="">{$control->option_strings.any}</option>
@@ -377,7 +377,7 @@
 
     {if $control->filters.filter_execution_type}
       <tr>
-        <td>{$labels.execution_type}</td>
+        <td class="label">{$labels.execution_type}</td>
           <td>
         <select class="chosen-select" name="filter_execution_type">
           {html_options options=$control->filters.filter_execution_type.items
@@ -389,7 +389,7 @@
 
     {if $control->filters.filter_assigned_user}
     <tr>
-      <td>{$labels.filter_owner}<img src="{$tlImages.info_small}" title="{$labels.tester_works_with_settings}"></td>
+      <td class="label">{$labels.filter_owner}<img src="{$tlImages.info_small}" title="{$labels.tester_works_with_settings}"></td>
       <td>
 
       {if $control->advanced_filter_mode}
@@ -431,7 +431,7 @@
 
     {if $control->filters.filter_bugs}
       <tr>
-        <td>{$labels.bugs_on_context}</td>
+        <td class="label">{$labels.bugs_on_context}</td>
         <td><input type="text" name="filter_bugs" size="{#BUGS_FILTER_SIZE#}"
                                maxlength="{#BUGS_FILTER_MAXLEN#}"
                                placeholder="{$labels.hint_list_of_bugs}"
@@ -455,7 +455,7 @@
     <tr><td>&nbsp;</td></tr> {* empty row for a little separation *}
 
         <tr>
-        <td>{$labels.filter_result}</td>
+        <td class="label">{$labels.filter_result}</td>
         <td>
         <select class="chosen-select" id="filter_result_result" 
         {if $control->advanced_filter_mode}
@@ -471,7 +471,7 @@
       </tr>
 
       <tr>
-        <td>{$labels.filter_on}</td>
+        <td class="label">{$labels.filter_on}</td>
         <td>
             <select class="chosen-select" name="filter_result_method" id="filter_result_method"
                     onchange="javascript: triggerBuildChooser('filter_result_build_row',
@@ -484,7 +484,7 @@
       </tr>
 
       <tr id="filter_result_build_row">
-        <td>{$labels.build}</td>
+        <td class="label">{$labels.build}</td>
         <td><select class="chosen-select" id="filter_result_build" name="filter_result_build">
           {html_options options=$control->filters.filter_result.filter_result_build.items
                         selected=$control->filters.filter_result.filter_result_build.selected}
@@ -553,7 +553,7 @@
 
       {if $control->settings.setting_refresh_tree_on_action}
         <tr>
-            <td>{$labels.do_auto_update}</td>
+            <td class="label">{$labels.do_auto_update}</td>
             <td>
                <input type="hidden" 
                       id="hidden_setting_refresh_tree_on_action"
@@ -587,7 +587,7 @@
 
   {if $control->filters.filter_doc_id}
     <tr>
-      <td>{$labels.document_id}</td>
+      <td class="label">{$labels.document_id}</td>
       <td><input type="text" name="filter_doc_id"
                              size="{#REQ_DOCID_SIZE#}"
                              maxlength="{#REQ_DOCID_MAXLEN#}"
@@ -598,7 +598,7 @@
 
   {if $control->filters.filter_title}
     <tr>
-      <td>{$labels.title}</td>
+      <td class="label">{$labels.title}</td>
       <td><input type="text" name="filter_title"
                              size="{#REQ_NAME_SIZE#}"
                              maxlength="{#REQ_NAME_MAXLEN#}"
@@ -609,7 +609,7 @@
   
   {if $control->filters.filter_status}
     <tr>
-      <td>{$labels.status}</td>
+      <td class="label">{$labels.status}</td>
       <td>
          <select class="chosen-select" id="filter_status"
         {if $control->advanced_filter_mode}
@@ -629,7 +629,7 @@
   
   {if $control->filters.filter_type}
     <tr>
-      <td>{$labels.req_type}</td>
+      <td class="label">{$labels.req_type}</td>
       <td>
         <select class="chosen-select" id="filter_type" 
         {if $control->advanced_filter_mode}
@@ -648,7 +648,7 @@
 
   {if $control->filters.filter_spec_type}
     <tr>
-      <td>{$labels.req_spec_type}</td>
+      <td class="label">{$labels.req_spec_type}</td>
       <td>
         <select class="chosen-select" id="filter_spec_type" 
         {if $control->advanced_filter_mode}
@@ -667,7 +667,7 @@
 
   {if $control->filters.filter_coverage}
     <tr>
-      <td>{$labels.req_expected_coverage}</td>
+      <td class="label">{$labels.req_expected_coverage}</td>
       <td><input type="text" name="filter_coverage"
                              size="{#COVERAGE_SIZE#}"
                              maxlength="{#COVERAGE_MAXLEN#}"
@@ -678,7 +678,7 @@
   
   {if $control->filters.filter_relation}
     <tr>
-      <td>{$labels.has_relation_type}</td>
+      <td class="label">{$labels.has_relation_type}</td>
       <td>
         <select class="chosen-select" id="filter_relation"
         {if $control->advanced_filter_mode}
@@ -697,7 +697,7 @@
   
   {if $control->filters.filter_tc_id}
     <tr>
-      <td>{$labels.th_tcid}</td>
+      <td class="label">{$labels.th_tcid}</td>
       <td><input type="text" name="filter_tc_id"
                              size="{#TC_ID_SIZE#}"
                              maxlength="{#TC_ID_MAXLEN#}"
