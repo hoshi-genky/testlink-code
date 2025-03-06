@@ -87,7 +87,7 @@
       <table class="smallGrey" style="width:98%;overflow: visible;">
 
       {if $control->settings.setting_testplan}
-        <tr>
+        <tr class="tr_param">
           <td class="td_label">{$labels.test_plan}</td>
           <td>
             <select class="chosen-select" name="setting_testplan" onchange="this.form.submit()">
@@ -100,7 +100,7 @@
 
       {if $control->settings.setting_platform}
         {$platformID=$control->settings.setting_platform.selected}
-        <tr>
+        <tr class="tr_param">
           <td class="td_label">{$labels.platform}</td>
           <td>
             <select name="setting_platform" class="chosen-select" onchange="this.form.submit()">
@@ -112,7 +112,7 @@
       {/if}
 
       {if $control->settings.setting_build}
-        <tr>
+        <tr class="tr_param">
           <td class="td_label">{$control->settings.setting_build.label}</td>
           <td>
             <select name="setting_build" class="chosen-select" onchange="this.form.submit()">
@@ -124,7 +124,7 @@
       {/if}
 
       {if $control->settings.setting_testsgroupby}
-        <tr>
+        <tr class="tr_param">
           <td class="td_label">{$labels.test_grouped_by}</td>
           <td>
             <select name="setting_testsgroupby" class="chosen-select" onchange="this.form.submit()">
@@ -136,7 +136,7 @@
       {/if}
     
       {if $control->settings.setting_refresh_tree_on_action}
-        <tr>
+        <tr class="tr_param">
             <td class="td_label">{$labels.do_auto_update}</td>
             <td>
                <input type="hidden" 
@@ -154,7 +154,7 @@
       {/if}
     
       {if $control->settings.setting_get_parent_child_relation}
-        <tr>
+        <tr class="tr_param">
             <td class="td_label">{$labels.parent_child_relation}</td>
             <td>
         <input type="hidden" 
@@ -171,12 +171,12 @@
           </tr>
       {/if}
 
-      <tr>
+      <tr class="tr_param">
         <td>&nbsp;</td>
       </tr>
 
       {if $control->settings.setting_exec_tree_counters_logic}
-        <tr>
+        <tr class="tr_param">
           <td class="td_label">
           {$labels.exec_tree_counters_logic}
           </td>
@@ -195,7 +195,7 @@
           <td>&nbsp;</td><td>&nbsp;</td>
         </tr>   
 
-        <tr>
+        <tr class="tr_param">
           <td>&nbsp;</td>
           <td>
             {if $control->draw_export_testplan_button}
@@ -242,7 +242,7 @@
     <table class="smallGrey" style="width:98%;">
 
     {if $control->filters.filter_tc_id}
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.th_tcid}</td>
         <td><input type="text" name="filter_tc_id"
                                size="{#TC_ID_SIZE#}"
@@ -253,7 +253,7 @@
     {/if}
 
     {if $control->filters.filter_testcase_name}
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.tc_title}</td>
         <td><input type="text" name="filter_testcase_name"
                                size="{#TC_TITLE_SIZE#}"
@@ -264,7 +264,7 @@
     {/if}
 
     {if $control->filters.filter_toplevel_testsuite}
-      <tr>
+      <tr class="tr_param">
           <td class="td_label">{$labels.testsuite}</td>
           <td>
             <select class="chosen-select" name="filter_toplevel_testsuite">
@@ -276,7 +276,7 @@
       {/if}
 
     {if is_array($control->filters.filter_keywords) && count($control->filters.filter_keywords) > 0}
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.keyword}</td>
         <td><select class="chosen-select" name="filter_keywords[]"
                     title="{$labels.keywords_filter_help}"
@@ -297,7 +297,7 @@
 
     {if is_array($control->filters.filter_platforms) && count($control->filters.filter_platforms) > 0 && 
     isset($control->filters.filter_platforms.size)}
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.platforms}</td>
         <td><select class="chosen-select" name="filter_platforms[]"
                     title=""
@@ -314,7 +314,7 @@
 
     {* TICKET 4353: added filter for active/inactive test cases *}
     {if isset($control->filters.filter_active_inactive) && $control->filters.filter_active_inactive}
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.filter_active_inactive}</td>
           <td>
             <select name="filter_active_inactive">
@@ -326,7 +326,7 @@
     {/if}
 
     {if $control->filters.filter_workflow_status}
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.status}</td>
         <td>
           <select class="chosen-select" id="filter_workflow_status" 
@@ -345,7 +345,7 @@
             
     {if is_array($control->filters.filter_importance) && 
         count($control->filters.filter_importance) > 0}
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.importance}</td>
         <td>
           <select class="chosen-select" id="filter_importance"
@@ -363,7 +363,7 @@
     {/if}
             
     {if $control->filters.filter_priority}
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.priority}</td>
         <td>
           <select class="chosen-select" name="filter_priority">
@@ -376,7 +376,7 @@
     {/if}
 
     {if $control->filters.filter_execution_type}
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.execution_type}</td>
           <td>
         <select class="chosen-select" name="filter_execution_type">
@@ -388,7 +388,7 @@
     {/if}
 
     {if $control->filters.filter_assigned_user}
-    <tr>
+    <tr class="tr_param">
       <td class="td_label">{$labels.filter_owner}<img src="{$tlImages.info_small}" title="{$labels.tester_works_with_settings}"></td>
       <td>
 
@@ -430,7 +430,7 @@
       {/if}
 
     {if $control->filters.filter_bugs}
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.bugs_on_context}</td>
         <td><input type="text" name="filter_bugs" size="{#BUGS_FILTER_SIZE#}"
                                maxlength="{#BUGS_FILTER_MAXLEN#}"
@@ -454,7 +454,7 @@
 
     <tr><td>&nbsp;</td></tr> {* empty row for a little separation *}
 
-        <tr>
+        <tr class="tr_param">
         <td class="td_label">{$labels.filter_result}</td>
         <td>
         <select class="chosen-select" id="filter_result_result" 
@@ -470,7 +470,7 @@
         </td>
       </tr>
 
-      <tr>
+      <tr class="tr_param">
         <td class="td_label">{$labels.filter_on}</td>
         <td>
             <select class="chosen-select" name="filter_result_method" id="filter_result_method"
@@ -552,7 +552,7 @@
       <table class="smallGrey" style="width:98%;">
 
       {if $control->settings.setting_refresh_tree_on_action}
-        <tr>
+        <tr class="tr_param">
             <td class="td_label">{$labels.do_auto_update}</td>
             <td>
                <input type="hidden" 
@@ -586,7 +586,7 @@
   <table class="smallGrey" style="width:98%;">
 
   {if $control->filters.filter_doc_id}
-    <tr>
+    <tr class="tr_param">
       <td class="td_label">{$labels.document_id}</td>
       <td><input type="text" name="filter_doc_id"
                              size="{#REQ_DOCID_SIZE#}"
@@ -597,7 +597,7 @@
   {/if}
 
   {if $control->filters.filter_title}
-    <tr>
+    <tr class="tr_param">
       <td class="td_label">{$labels.title}</td>
       <td><input type="text" name="filter_title"
                              size="{#REQ_NAME_SIZE#}"
@@ -608,7 +608,7 @@
   {/if}
   
   {if $control->filters.filter_status}
-    <tr>
+    <tr class="tr_param">
       <td class="td_label">{$labels.status}</td>
       <td>
          <select class="chosen-select" id="filter_status"
@@ -628,7 +628,7 @@
   {/if}
   
   {if $control->filters.filter_type}
-    <tr>
+    <tr class="tr_param">
       <td class="td_label">{$labels.req_type}</td>
       <td>
         <select class="chosen-select" id="filter_type" 
@@ -647,7 +647,7 @@
   {/if}
 
   {if $control->filters.filter_spec_type}
-    <tr>
+    <tr class="tr_param">
       <td class="td_label">{$labels.req_spec_type}</td>
       <td>
         <select class="chosen-select" id="filter_spec_type" 
@@ -666,7 +666,7 @@
   {/if}
 
   {if $control->filters.filter_coverage}
-    <tr>
+    <tr class="tr_param">
       <td class="td_label">{$labels.req_expected_coverage}</td>
       <td><input type="text" name="filter_coverage"
                              size="{#COVERAGE_SIZE#}"
@@ -677,7 +677,7 @@
   {/if}
   
   {if $control->filters.filter_relation}
-    <tr>
+    <tr class="tr_param">
       <td class="td_label">{$labels.has_relation_type}</td>
       <td>
         <select class="chosen-select" id="filter_relation"
@@ -696,7 +696,7 @@
   {/if}
   
   {if $control->filters.filter_tc_id}
-    <tr>
+    <tr class="tr_param">
       <td class="td_label">{$labels.th_tcid}</td>
       <td><input type="text" name="filter_tc_id"
                              size="{#TC_ID_SIZE#}"
