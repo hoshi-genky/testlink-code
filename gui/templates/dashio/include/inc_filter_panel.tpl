@@ -113,7 +113,7 @@
 
       {if $control->settings.setting_build}
         <tr>
-          <td>{$control->settings.setting_build.label}</td>
+          <td class="td_label">{$control->settings.setting_build.label}</td>
           <td>
             <select name="setting_build" class="chosen-select" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_build.items
@@ -177,7 +177,7 @@
 
       {if $control->settings.setting_exec_tree_counters_logic}
         <tr>
-          <td>
+          <td class="td_label">
           {$labels.exec_tree_counters_logic}
           </td>
           <td>
@@ -233,7 +233,7 @@
 {if $control->display_filters}
 
   <div id="filter_panel">
-    <div class="x-panel-header x-unselectable">
+    <div class="x-panel-header x-unselectable td_label">
       {$labels.caption_nav_filters}
     </div>
 
