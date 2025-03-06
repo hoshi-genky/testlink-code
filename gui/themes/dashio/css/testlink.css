@@ -1198,5 +1198,7 @@ td.clickable_edit:hover{
 
 #filters td.td_label{
 	font-size: 80%;
+	text-align: right;
+	padding-right: 3px;
 }
 /* ----- END ------------------------------------------------------------------------- */
