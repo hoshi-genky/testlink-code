@@ -1203,7 +1203,7 @@ td.td_label{
 	min-width: 70px;
 }
 table:has(tr.tr_param){
-	border: 1px solid #005;
+	border: 2px solid #ddd;
 }
 tr.tr_param td{
 	padding-top: 1px;
