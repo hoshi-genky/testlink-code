@@ -118,7 +118,7 @@ if( !defined('DB_TABLE_PREFIX') ) {
 define('TL_ABS_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 
 /** Just for documentation */
-$tlCfg->testlinkdotorg = 'http://www.testlink.org';
+$tlCfg->testlinkdotorg = '//www.testlink.org';
 
 /** GUI themes (base for CSS and images)- modify if you create own one */
 $tlCfg->theme_dir = 'gui/themes/default/';
