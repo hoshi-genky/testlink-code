@@ -4231,5 +4231,11 @@ $TLS_multiple_entities_search = '複数エンティティで検索';
 $TLS_no_access_to_feature = 'この機能にアクセスする権限がありません';
 
 $TLS_applyExecTypeChangeToAllSteps = "すべてのステップに適用";
+
+$TLS_exec_tree_counters_logic = 'カウンターの表示';
+$TLS_use_latest_exec_on_testplan_for_counters = 'テストプラン';
+$TLS_use_latest_exec_on_contex_for_counters = 'ビルド選択';
+$TLS_use_latest_exec_on_testplan_plat_for_counters = 'テストプラン プラットフォーム';
+
 // ----- END ------------------------------------------------------------------
 ?>
