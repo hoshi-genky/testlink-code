@@ -13,7 +13,7 @@
 
   <div id="tsuite_control_panel" 
       style="display:{$tlCfg->gui->op_area_display->test_spec_container};">
-      <fieldset class="groupBtn">
+      <fieldset class="groupBtn" class="display:inline-block">
         <b>{$labels.testsuite_operations}</b>
         <form method="post" action="{$basehref}lib/testcases/containerEdit.php">
           <input type="hidden" name="form_token" id="form_token" value="{$gui->form_token}" />
@@ -92,7 +92,7 @@
       </fieldset>
 
       {* ----- Work with test cases -------------------------- *}
-      <fieldset class="groupBtn">
+      <fieldset class="groupBtn" class="display:inline-block">
         <b>{$labels.testcase_operations}</b>
         <form method="post" action="{$basehref}lib/testcases/tcEdit.php">
           <input type="hidden" name="tproject_id" value="{$gui->tproject_id}" />

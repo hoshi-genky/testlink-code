@@ -141,7 +141,7 @@ viewer for test case in test specification
     {/if} 
 
     {if $allOpOnTCV}
-      <fieldset class="groupBtn">
+      <fieldset class="groupBtn" class="display:inline-block">
     	  <b>{$tcView_viewer_labels.testcase_operations}</b>
         <form style="display: inline;" id="topControls" name="topControls"
           method="post" action="{$basehref}lib/testcases/tcEdit.php">
@@ -214,7 +214,7 @@ viewer for test case in test specification
     {* End of TC Section *}
 
     {* START TCV SECTION *}
-    <fieldset class="groupBtn">
+    <fieldset class="groupBtn" class="display:inline-block">
     	<b>{$tcView_viewer_labels.testcase_version_operations}</b>
       <form style="display: inline;" id="versionControls" 
         name="versionControls" method="post" 
@@ -316,7 +316,7 @@ viewer for test case in test specification
 {/if} {* $args_can_do->edit -> user can edit *}
 
 {* Print TC version *}
-<fieldset class="groupBtn">
+<fieldset class="groupBtn" class="display:inline-block">
 <span>
   <form style="display: inline;" id="tcprint" 
         name="tcprint" method="post" action="" >
