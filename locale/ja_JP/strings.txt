@@ -1268,7 +1268,7 @@ $TLS_expected_results = "期待結果";
 $TLS_preconditions = "前提条件";
 $TLS_steps = "ステップ";
 $TLS_summary = "要約";
-$TLS_tc_title = "テストケース タイトル";
+$TLS_tc_title = "タイトル";
 
 
 
