@@ -131,7 +131,8 @@ viewer for test case in test specification
     {/if}
 
     <div style="display:{$tlCfg->gui->op_area_display->test_case};" 
-         id="tcView_viewer_tcase_control_panel_{$tcversion_id}">
+         id="tcView_viewer_tcase_control_panel_{$tcversion_id}"
+         class="tcView_viewer_tcase_control_panel">
 
     {$allOpOnTCV = false}
     {if 'editOnExec' != $gui->show_mode 
@@ -141,7 +142,7 @@ viewer for test case in test specification
     {/if} 
 
     {if $allOpOnTCV}
-      <fieldset class="groupBtn" class="display:inline-block">
+      <fieldset class="groupBtn" style="display:inline-block">
     	  <b>{$tcView_viewer_labels.testcase_operations}</b>
         <form style="display: inline;" id="topControls" name="topControls"
           method="post" action="{$basehref}lib/testcases/tcEdit.php">
@@ -214,7 +215,7 @@ viewer for test case in test specification
     {* End of TC Section *}
 
     {* START TCV SECTION *}
-    <fieldset class="groupBtn" class="display:inline-block">
+    <fieldset class="groupBtn" style="display:inline-block">
     	<b>{$tcView_viewer_labels.testcase_version_operations}</b>
       <form style="display: inline;" id="versionControls" 
         name="versionControls" method="post" 
@@ -316,7 +317,7 @@ viewer for test case in test specification
 {/if} {* $args_can_do->edit -> user can edit *}
 
 {* Print TC version *}
-<fieldset class="groupBtn" class="display:inline-block">
+<fieldset class="groupBtn" style="display:inline-block">
 <span>
   <form style="display: inline;" id="tcprint" 
         name="tcprint" method="post" action="" >

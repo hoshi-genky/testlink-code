@@ -139,7 +139,7 @@ viewer for test case in test specification
     {/if} 
 
     {if $allOpOnTCV}
-      <fieldset class="groupBtn" class="display:inline-block">
+      <fieldset class="groupBtn" style="display:inline-block">
     	  <b>{$tcView_viewer_labels.testcase_operations}</b>
         <form style="display: inline;" id="topControls" name="topControls" method="post" action="{$basehref}lib/testcases/tcEdit.php">
       		<input type="hidden" name="testcase_id" value="{$args_testcase.testcase_id}" />
@@ -213,7 +213,7 @@ viewer for test case in test specification
     {* End of TC Section *}
 
     {* START TCV SECTION *}
-    <fieldset class="groupBtn" class="display:inline-block">
+    <fieldset class="groupBtn" style="display:inline-block">
     	<b>{$tcView_viewer_labels.testcase_version_operations}</b>
       <form style="display: inline;" id="versionControls" name="versionControls" method="post" action="{$basehref}lib/testcases/tcEdit.php">
       	<input type="hidden" name="testcase_id" id="versionControls_testcase_id" value="{$args_testcase.testcase_id}" />

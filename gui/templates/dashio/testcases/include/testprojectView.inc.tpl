@@ -10,7 +10,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
       title="{$labels.actions}">
     </i>
     <div id="tproject_control_panel" style="display:{$tlCfg->gui->op_area_display->test_spec_container};">
-      <fieldset class="groupBtn" class="display:inline-block">
+      <fieldset class="groupBtn" style="display:inline-block">
       <b>{$labels.testsuite_operations}</b>
       <form method="post" action="{$basehref}lib/testcases/containerEdit.php">
 
