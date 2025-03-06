@@ -88,7 +88,7 @@
 
       {if $control->settings.setting_testplan}
         <tr>
-          <td>{$labels.test_plan}</td>
+          <td class="td_label">{$labels.test_plan}</td>
           <td>
             <select class="chosen-select" name="setting_testplan" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_testplan.items
@@ -101,7 +101,7 @@
       {if $control->settings.setting_platform}
         {$platformID=$control->settings.setting_platform.selected}
         <tr>
-          <td>{$labels.platform}</td>
+          <td class="td_label">{$labels.platform}</td>
           <td>
             <select name="setting_platform" class="chosen-select" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_platform.items
@@ -125,7 +125,7 @@
 
       {if $control->settings.setting_testsgroupby}
         <tr>
-          <td>{$labels.test_grouped_by}</td>
+          <td class="td_label">{$labels.test_grouped_by}</td>
           <td>
             <select name="setting_testsgroupby" class="chosen-select" onchange="this.form.submit()">
             {html_options options=$control->settings.setting_testsgroupby.items
@@ -137,7 +137,7 @@
     
       {if $control->settings.setting_refresh_tree_on_action}
         <tr>
-            <td>{$labels.do_auto_update}</td>
+            <td class="td_label">{$labels.do_auto_update}</td>
             <td>
                <input type="hidden" 
                       id="hidden_setting_refresh_tree_on_action"
@@ -155,7 +155,7 @@
     
       {if $control->settings.setting_get_parent_child_relation}
         <tr>
-            <td>{$labels.parent_child_relation}</td>
+            <td class="td_label">{$labels.parent_child_relation}</td>
             <td>
         <input type="hidden" 
                       id="hidden_setting_get_parent_child_relation"

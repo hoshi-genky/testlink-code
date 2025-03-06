@@ -1196,7 +1196,7 @@ td.clickable_edit:hover{
 	background-color: #5edddf;
   }
 
-#filters td.td_label{
+td.td_label{
 	font-size: 80%;
 	text-align: right;
 	padding-right: 3px;
