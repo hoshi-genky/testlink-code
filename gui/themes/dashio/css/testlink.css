@@ -1196,7 +1196,7 @@ td.clickable_edit:hover{
 	background-color: #5edddf;
   }
 
-#filters td.label{
+#filters td.td_label{
 	font-size: 80%;
 }
 /* ----- END ------------------------------------------------------------------------- */
