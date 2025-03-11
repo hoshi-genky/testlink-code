@@ -344,22 +344,19 @@ function processTestPlan(&$dbHandler,&$argsObj,&$tplanMgr)
 									   lang_get('no_newest_version_of_linked_tcversions');
 	
     $set2update['items'] = $tplanMgr->get_linked_and_newest_tcversions($argsObj->tplan_id);
-    if( count($set2update['items']) > 0 )
-    {
-		if( !is_null($set2update['items']) && count($set2update['items']) > 0 )
+	if( !is_null($set2update['items']) && count($set2update['items']) > 0 )
+	{
+		$set2update['msg'] = '';
+		$itemSet=array_keys($set2update['items']);
+		$path_info=$tplanMgr->tree_manager->get_full_path_verbose($itemSet);
+		foreach($set2update['items'] as $tcase_id => $value)
 		{
-			$set2update['msg'] = '';
-			$itemSet=array_keys($set2update['items']);
-			$path_info=$tplanMgr->tree_manager->get_full_path_verbose($itemSet);
-			foreach($set2update['items'] as $tcase_id => $value)
-			{
-				$path=$path_info[$tcase_id];
-				unset($path[0]);
-				$path[]='';
-				$set2update['items'][$tcase_id]['path']=implode(' / ',$path);
-			}
-		} 
-    }
+			$path=$path_info[$tcase_id];
+			unset($path[0]);
+			$path[]='';
+			$set2update['items'][$tcase_id]['path']=implode(' / ',$path);
+		}
+	} 
     return $set2update;
 }
 
