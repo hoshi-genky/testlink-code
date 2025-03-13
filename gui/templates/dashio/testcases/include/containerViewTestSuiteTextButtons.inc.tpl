@@ -34,55 +34,55 @@
           {/if}
 
           <button style="border:0;" name="new_testsuite" id="new_testsuite" onclick="doAction.value='new_testsuite'">
-            <i class="fas fa-plus-circle" title="{$labels.btn_new_testsuite}"></i>
+            <i class="fas fa-plus-circle" title="{$labels.btn_new_testsuite}"> 追加 </i>
           </button>
                
           <button style="border:0;" name="edit_testsuite" id="edit_testsuite"
             onclick="doAction.value='edit_testsuite'">
             <i class="fas fa-pencil-alt" 
-               title="{$labels.btn_edit_testsuite}"></i>
+               title="{$labels.btn_edit_testsuite}"> 編集 </i>
           </button>
         
           <button style="border:0;" name="move_testsuite_viewer" 
             id="move_testsuite_viewer"
             onclick="doAction.value='move_testsuite_viewer'">
-            <i class="fas fa-copy" title="{$labels.alt_move_cp_testsuite}"></i>
+            <i class="fas fa-copy" title="{$labels.alt_move_cp_testsuite}"> 移動/コピー </i>
           </button>
 
           <button style="border:0;" name="delete_testsuite" 
             id="delete_testsuite"
             onclick="doAction.value='delete_testsuite'">
             <i class="fas fa-times-circle" 
-               title="{$labels.alt_del_testsuite}"></i>
+               title="{$labels.alt_del_testsuite}"> 削除 </i>
           </button>
 
           <button style="border:0;" name="reorder_testsuites_alpha" 
             id="reorder_testsuites_alpha"
             onclick="doAction.value='reorder_testsuites_alpha'">
             <i class="fas fa-sort-alpha-down" 
-              title="{$labels.btn_reorder_testsuites_alpha}"></i>
+              title="{$labels.btn_reorder_testsuites_alpha}"> 並替 </i>
           </button>
 
           <button style="border:0;" name="testcases_table_view" 
             id="testcases_table_view"
             onclick="doAction.value='testcases_table_view'">
             <i class="fas fa-table" 
-              title="{$labels.btn_testcases_table_view}"></i>
+              title="{$labels.btn_testcases_table_view}"> 表 </i>
           </button>
                  
 
           <i class="fas fa-book" style="padding:1px 6px;"
             onclick="window.open('{$testSuiteDocAction}')" 
-            title="{$labels.btn_gen_test_suite_spec_new_window}"></i>   
+            title="{$labels.btn_gen_test_suite_spec_new_window}"> 別画面 </i>   
 
           <i class="far fa-file-word" style="padding:1px 6px;"
             onclick="window.open('{$testSuiteWordDocAction}')" 
-            title="{$labels.btn_gen_test_suite_spec_word}"></i>
+            title="{$labels.btn_gen_test_suite_spec_word}"> 取込 </i>
 
           <i class="fas fa-file-import" style="padding:1px 6px;"
             id="importItem"
             onclick="location='{$importToTSuiteAction}'"
-            title="{$labels.btn_import_testsuite}"></i>
+            title="{$labels.btn_import_testsuite}"> 書出 </i>
 
           <i class="fas fa-file-export" style="padding:1px 6px;"
             id="exportItem"
