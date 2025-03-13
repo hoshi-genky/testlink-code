@@ -124,7 +124,7 @@
           <button style="border:0;" name="move_testcases_viewer" 
             id="move_testcases_viewer"
             onclick="doAction.value='move_testcases_viewer'">
-            <i class="fas fa-copy" title="{$labels.alt_move_cp_testcases}"> 移動 </i>
+            <i class="fas fa-copy" title="{$labels.alt_move_cp_testcases}"> 移動/コピー </i>
           </button>
 
           <button style="border:0;" name="delete_testcases" 
