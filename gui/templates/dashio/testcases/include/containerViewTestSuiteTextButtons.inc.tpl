@@ -13,7 +13,7 @@
 
   <div id="tsuite_control_panel" 
       style="display:{$tlCfg->gui->op_area_display->test_spec_container};">
-      <fieldset class="groupBtn" style="display:inline-block">
+      <fieldset class="groupBtn" style="display:inline-block"><span class="testsuite">
         <b>{$labels.testsuite_operations}</b>
         <form method="post" action="{$basehref}lib/testcases/containerEdit.php">
           <input type="hidden" name="form_token" id="form_token" value="{$gui->form_token}" />
@@ -88,11 +88,11 @@
             id="exportItem"
             onclick="location='{$tsuiteExportAction}'"
             title="{$labels.btn_export_testsuite}"> 書出 </i>
-        </form>
+        </form></span>
       </fieldset>
 
       {* ----- Work with test cases -------------------------- *}
-      <fieldset class="groupBtn" style="display:block">
+      <fieldset class="groupBtn" style="display:block"><span class="testcase">
         <b>{$labels.testcase_operations}</b>
         <form method="post" action="{$basehref}lib/testcases/tcEdit.php">
           <input type="hidden" name="tproject_id" value="{$gui->tproject_id}" />
@@ -155,6 +155,6 @@
           
           <i class="fas fa-magic" onclick="location='{$createTCFromIssueMantisXMLAction}'" 
              title="{$labels.btn_create_from_issue_xml}"> 課題取込 </i>
-        </form>
+        </form></span>
       </fieldset>
   </div>  
