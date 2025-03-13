@@ -3545,3 +3545,7 @@ hr.testcase-step-splitter{
 #delete_testsuite, #delete_testcases{
     color: #D70000;
 }
+
+#new_testsuite, #create_tc{
+    color: #00E490;
+}
