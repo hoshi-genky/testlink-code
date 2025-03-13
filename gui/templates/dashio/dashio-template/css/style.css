@@ -3541,3 +3541,7 @@ hr.testcase-step-splitter{
     padding: 5px;
     border: 1px solid #00b;
 }
+
+#delete_testsuite, #delete_testcases{
+    color: #f00;
+}

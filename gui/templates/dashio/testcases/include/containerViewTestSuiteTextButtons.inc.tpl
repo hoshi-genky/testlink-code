@@ -49,13 +49,6 @@
             <i class="fas fa-copy" title="{$labels.alt_move_cp_testsuite}"> 移動/コピー </i>
           </button>
 
-          <button style="border:0;" name="delete_testsuite" 
-            id="delete_testsuite"
-            onclick="doAction.value='delete_testsuite'">
-            <i class="fas fa-times-circle" 
-               title="{$labels.alt_del_testsuite}"> 削除 </i>
-          </button>
-
           <button style="border:0;" name="reorder_testsuites_alpha" 
             id="reorder_testsuites_alpha"
             onclick="doAction.value='reorder_testsuites_alpha'">
@@ -88,6 +81,13 @@
             id="exportItem"
             onclick="location='{$tsuiteExportAction}'"
             title="{$labels.btn_export_testsuite}"> 書出 </i>
+
+          <button style="border:0;" name="delete_testsuite" 
+            id="delete_testsuite"
+            onclick="doAction.value='delete_testsuite'">
+            <i class="fas fa-times-circle" 
+               title="{$labels.alt_del_testsuite}"> 削除 </i>
+          </button>
         </form></span>
       </fieldset>
 
@@ -127,21 +127,22 @@
             <i class="fas fa-copy" title="{$labels.alt_move_cp_testcases}"> 移動/コピー </i>
           </button>
 
-          <button style="border:0;" name="delete_testcases" 
-            id="delete_testcases"
-            onclick="doAction.value='delete_testcases'">
-            <i class="fas fa-times-circle" 
-               title="{$labels.btn_delete_testcases}"> 削除 </i>
-          </button>
-
           <button style="border:0;" name="reorder_testcases" 
             id="reorder_testcases"
             onclick="doAction.value='reorder_testcases'">
             <i class="fas fa-random" 
                title="{$gui->btn_reorder_testcases}"> 並替 </i>
           </button>
+
+          <button style="border:0;" name="delete_testcases" 
+            id="delete_testcases"
+            onclick="doAction.value='delete_testcases'">
+            <i class="fas fa-times-circle" 
+               title="{$labels.btn_delete_testcases}"> 削除 </i>
+          </button>
         </form>
 
+<!--
         <form method="post" action="{$basehref}lib/testcases/tcEdit.php">
           <input type="hidden" name="tproject_id" value="{$gui->tproject_id}" />
           <input type="hidden" name="form_token" id="form_token" value="{$gui->form_token}" />
@@ -155,6 +156,8 @@
           
           <i class="fas fa-magic" onclick="location='{$createTCFromIssueMantisXMLAction}'" 
              title="{$labels.btn_create_from_issue_xml}"> 課題取込 </i>
-        </form></span>
+        </form>
+-->
+        </span>
       </fieldset>
   </div>  
