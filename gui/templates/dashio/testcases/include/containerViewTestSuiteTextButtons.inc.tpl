@@ -62,7 +62,14 @@
             <i class="fas fa-table" 
               title="{$labels.btn_testcases_table_view}"> 表 </i>
           </button>
-                 
+
+          <button style="border:0;" name="delete_testsuite" 
+            id="delete_testsuite"
+            onclick="doAction.value='delete_testsuite'">
+            <i class="fas fa-times-circle" 
+               title="{$labels.alt_del_testsuite}"> 削除 </i>
+          </button>
+
 
           <i class="fas fa-book" style="padding:1px 6px;"
             onclick="window.open('{$testSuiteDocAction}')" 
@@ -71,7 +78,7 @@
           <i class="far fa-file-word" style="padding:1px 6px;"
             onclick="window.open('{$testSuiteWordDocAction}')" 
             title="{$labels.btn_gen_test_suite_spec_word}"> 文書 </i>
-
+          
           <i class="fas fa-file-import" style="padding:1px 6px;"
             id="importItem"
             onclick="location='{$importToTSuiteAction}'"
@@ -82,12 +89,6 @@
             onclick="location='{$tsuiteExportAction}'"
             title="{$labels.btn_export_testsuite}"> 書出 </i>
 
-          <button style="border:0;" name="delete_testsuite" 
-            id="delete_testsuite"
-            onclick="doAction.value='delete_testsuite'">
-            <i class="fas fa-times-circle" 
-               title="{$labels.alt_del_testsuite}"> 削除 </i>
-          </button>
         </form></span>
       </fieldset>
 
@@ -142,7 +143,6 @@
           </button>
         </form>
 
-<!--
         <form method="post" action="{$basehref}lib/testcases/tcEdit.php">
           <input type="hidden" name="tproject_id" value="{$gui->tproject_id}" />
           <input type="hidden" name="form_token" id="form_token" value="{$gui->form_token}" />
@@ -153,11 +153,12 @@
 
           <i class="fas fa-file-export" style="padding:1px 6px;" id="exportItem"
              onclick="location='{$exportTestCasesAction}'" title="{$labels.btn_export_tc}"> 書出 </i>
-          
+<!--          
           <i class="fas fa-magic" onclick="location='{$createTCFromIssueMantisXMLAction}'" 
              title="{$labels.btn_create_from_issue_xml}"> 課題取込 </i>
+-->             
         </form>
--->
+
         </span>
       </fieldset>
   </div>  
