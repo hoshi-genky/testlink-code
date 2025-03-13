@@ -3534,8 +3534,10 @@ hr.testcase-step-splitter{
 #tsuite_control_panel span.testsuite{
     background-color: #EEE8FF;
     padding: 5px;
+    border: 1px solid #00b;
 }
 #tsuite_control_panel span.testcase{
     background-color: #FFE9D3;
     padding: 5px;
+    border: 1px solid #00b;
 }
