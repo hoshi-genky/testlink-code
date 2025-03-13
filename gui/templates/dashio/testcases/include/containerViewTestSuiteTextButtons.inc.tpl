@@ -77,22 +77,22 @@
 
           <i class="far fa-file-word" style="padding:1px 6px;"
             onclick="window.open('{$testSuiteWordDocAction}')" 
-            title="{$labels.btn_gen_test_suite_spec_word}"> 取込 </i>
+            title="{$labels.btn_gen_test_suite_spec_word}"> 文書 </i>
 
           <i class="fas fa-file-import" style="padding:1px 6px;"
             id="importItem"
             onclick="location='{$importToTSuiteAction}'"
-            title="{$labels.btn_import_testsuite}"> 書出 </i>
+            title="{$labels.btn_import_testsuite}"> 取込 </i>
 
           <i class="fas fa-file-export" style="padding:1px 6px;"
             id="exportItem"
             onclick="location='{$tsuiteExportAction}'"
-            title="{$labels.btn_export_testsuite}"></i>
+            title="{$labels.btn_export_testsuite}"> 書出 </i>
         </form>
       </fieldset>
 
       {* ----- Work with test cases -------------------------- *}
-      <fieldset class="groupBtn" style="display:inline-block">
+      <fieldset class="groupBtn" style="display:block">
         <b>{$labels.testcase_operations}</b>
         <form method="post" action="{$basehref}lib/testcases/tcEdit.php">
           <input type="hidden" name="tproject_id" value="{$gui->tproject_id}" />
@@ -101,7 +101,7 @@
           <input type="hidden" name="containerID" value="{$gui->container_data.id}" />
 
           <button style="border:0;" name="create_tc" id="create_tc" onclick="doAction.value='create'">
-            <i class="fas fa-plus-circle" title="{$labels.btn_new_tc}"></i>
+            <i class="fas fa-plus-circle" title="{$labels.btn_new_tc}"> 追加 </i>
           </button>
         </form>
 
@@ -124,21 +124,21 @@
           <button style="border:0;" name="move_testcases_viewer" 
             id="move_testcases_viewer"
             onclick="doAction.value='move_testcases_viewer'">
-            <i class="fas fa-copy" title="{$labels.alt_move_cp_testcases}"></i>
+            <i class="fas fa-copy" title="{$labels.alt_move_cp_testcases}"> 移動 </i>
           </button>
 
           <button style="border:0;" name="delete_testcases" 
             id="delete_testcases"
             onclick="doAction.value='delete_testcases'">
             <i class="fas fa-times-circle" 
-               title="{$labels.btn_delete_testcases}"></i>
+               title="{$labels.btn_delete_testcases}"> 削除 </i>
           </button>
 
           <button style="border:0;" name="reorder_testcases" 
             id="reorder_testcases"
             onclick="doAction.value='reorder_testcases'">
             <i class="fas fa-random" 
-               title="{$gui->btn_reorder_testcases}"></i>
+               title="{$gui->btn_reorder_testcases}"> 並替 </i>
           </button>
         </form>
 
@@ -148,13 +148,13 @@
           <input type="hidden" name="doAction" id="doAction" value="" />
 
           <i class="fas fa-file-import" style="padding:1px 6px;"
-             id="importItem" onclick="location='{$importTestCasesAction}'" title="{$labels.btn_import_tc}"></i>
+             id="importItem" onclick="location='{$importTestCasesAction}'" title="{$labels.btn_import_tc}"> 取込 </i>
 
           <i class="fas fa-file-export" style="padding:1px 6px;" id="exportItem"
-             onclick="location='{$exportTestCasesAction}'" title="{$labels.btn_export_tc}"></i>
+             onclick="location='{$exportTestCasesAction}'" title="{$labels.btn_export_tc}"> 書出 </i>
           
           <i class="fas fa-magic" onclick="location='{$createTCFromIssueMantisXMLAction}'" 
-             title="{$labels.btn_create_from_issue_xml}"></i>
+             title="{$labels.btn_create_from_issue_xml}"> 課題取込 </i>
         </form>
       </fieldset>
   </div>  
