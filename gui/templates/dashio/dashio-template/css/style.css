@@ -3531,11 +3531,11 @@ hr.testcase-step-splitter{
 #tsuite_control_panel button{
     background-color: transparent;
 }
-#tsuite_control_panel span.testsuites{
+#tsuite_control_panel span.testsuite{
     background-color: #EEE8FF;
-    padding-top: 5px;
+    padding: 5px;
 }
 #tsuite_control_panel span.testcase{
     background-color: #FFE9D3;
-    padding-top: 5px;
+    padding: 5px;
 }
