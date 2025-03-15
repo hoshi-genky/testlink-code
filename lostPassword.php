@@ -75,7 +75,7 @@ $smarty->assign('gui',$gui);
 $tpl = str_replace('.php','.tpl',basename($_SERVER['SCRIPT_NAME']));
 if( $args->viewer == 'new' )
 {
-  $tpl = 'login/lostPassword-model-marcobiedermann.tpl';
+  //$tpl = 'login/lostPassword-model-marcobiedermann.tpl';
 }  
 
 $smarty->display($tpl);
