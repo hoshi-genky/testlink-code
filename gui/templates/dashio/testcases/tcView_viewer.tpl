@@ -218,6 +218,7 @@ viewer for test case in test specification
 
     {* START TCV SECTION *}
     <fieldset class="groupBtn" style="display:inline-block">
+      <span class="tc_version">
     	<b>{$tcView_viewer_labels.testcase_version_operations}</b>
       <form style="display: inline;" id="versionControls" 
         name="versionControls" method="post" 
@@ -313,6 +314,7 @@ viewer for test case in test specification
       	  </form>
       	</span>
       {/if}
+      </span>
     </fieldset>
     {* End TCV SECTION *}
 

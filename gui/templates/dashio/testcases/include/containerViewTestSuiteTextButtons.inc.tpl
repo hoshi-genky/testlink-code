@@ -73,7 +73,7 @@
 
           <i class="fas fa-book" style="padding:1px 6px;"
             onclick="window.open('{$testSuiteDocAction}')" 
-            title="{$labels.btn_gen_test_suite_spec_new_window}"> 別画面 </i>   
+            title="{$labels.btn_gen_test_suite_spec_new_window}"> 別窓 </i>   
 
           <i class="far fa-file-word" style="padding:1px 6px;"
             onclick="window.open('{$testSuiteWordDocAction}')" 

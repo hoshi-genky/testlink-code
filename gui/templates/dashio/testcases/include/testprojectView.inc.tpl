@@ -11,6 +11,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     </i>
     <div id="tproject_control_panel" style="display:{$tlCfg->gui->op_area_display->test_spec_container};">
       <fieldset class="groupBtn" style="display:inline-block">
+      <span class="testsuite">
       <b>{$labels.testsuite_operations}</b>
       <form method="post" action="{$basehref}lib/testcases/containerEdit.php">
 
@@ -26,31 +27,32 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
         <input type="hidden" name="containerType" id="containerType" value="{$gui->level}" />
 
         <button style="border:0;" name="new_testsuite" id="new_testsuite" onclick="doAction.value='new_testsuite'">
-          <i class="fas fa-plus-circle" title="{$labels.btn_new_testsuite}"></i>
+          <i class="fas fa-plus-circle" title="{$labels.btn_new_testsuite}"> 追加 </i>
         </button>
 
         <button style="border:0;" name="reorder_testproject_testsuites_alpha" id="reorder_testproject_testsuites_alpha" 
                 onclick="doAction.value='reorder_testproject_testsuites_alpha'">
             <i class="fas fa-sort-alpha-down" 
-              title="{$labels.btn_reorder_testsuites_alpha}"></i>
+              title="{$labels.btn_reorder_testsuites_alpha}"> 並替 </i>
           </button>
 
         <i class="fas fa-file-import" style="padding:1px 6px;" id="importItem" onclick="location='{$importToTProjectAction}'"
-            title="{$labels.btn_import_testsuite}"></i>
+            title="{$labels.btn_import_testsuite}"> 取込 </i>
 
         {if $gui->canDoExport}
           <i class="fas fa-file-export" style="padding:1px 6px;" id="exportItem" onclick="location='{$tsuiteExportAction}'"
-            title="{$labels.btn_export_all_testsuites}"></i>
+            title="{$labels.btn_export_all_testsuites}"> 書出 </i>
         {/if}
 
 
         <i class="fas fa-book" style="padding:1px 6px;" onclick="window.open('{$testSpecFullDocAction}')" 
-            title="{$labels.btn_gen_test_spec_new_window}"></i>   
+            title="{$labels.btn_gen_test_spec_new_window}"> 別窓 </i>   
 
         <i class="far fa-file-word" style="padding:1px 6px;" onclick="window.open('{$testSpecFullWordDocAction}')" 
-            title="{$labels.btn_gen_test_spec_word}"></i>
+            title="{$labels.btn_gen_test_spec_word}"> 文書 </i>
 
       </form>
+      </span>
       </fieldset>
     </div>
 {/if}
