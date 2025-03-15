@@ -24,7 +24,7 @@
  *
  **/
 
- ini_set( 'display_errors', 1 ); 
+ ini_set( 'display_errors', 1 );
 
 // ----------------------------------------------------------------------------
 /* [INITIALIZATION] - DO NOT CHANGE THE SECTION */
@@ -422,12 +422,12 @@ $tlCfg->loggerFilter = null; // default defined on logger.class.php ;
  * Configure using custom_config.inc.php
  * @uses lib/functions/email_api.php
  */
-$g_smtp_host        = '[smtp_host_not_configured]';  # SMTP server MUST BE configured
+$g_smtp_host        = 'officem5201.sakura.ne.jp';  # SMTP server MUST BE configured
 
 # Configure using custom_config.inc.php
-$g_tl_admin_email     = '[testlink_sysadmin_email_not_configured]'; # for problem/error notification
-$g_from_email         = '[from_email_not_configured]';  # email sender
-$g_return_path_email  = '[return_path_email_not_configured]';
+$g_tl_admin_email     = 'no-reply@officem5201.sakura.ne.jp'; # for problem/error notification
+$g_from_email         = 'no-reply@officem5201.sakura.ne.jp';  # email sender
+$g_return_path_email  = 'no-reply@officem5201.sakura.ne.jp';
 
 /**
  * Email notification priority (low by default)
@@ -445,22 +445,22 @@ $g_mail_priority = 5;
 $g_phpMailer_method = PHPMAILER_METHOD_SMTP;
 
 /** Configure only if SMTP server requires authentication */
-$g_smtp_username    = '';  # user
-$g_smtp_password    = '';  # password
+$g_smtp_username    = 'no-reply@officem5201.sakura.ne.jp';  # user
+$g_smtp_password    = 'P2vnaSrm';  # password
 
 /**
  * This control the connection mode to SMTP server. 
  * Can be '', 'ssl','tls'
  * @global string $g_smtp_connection_mode
  */
-$g_smtp_connection_mode = '';
+$g_smtp_connection_mode = 'ssl';
 
 /**
  * The smtp port to use.  The typical SMTP ports are 25 and 587.  The port to use
  * will depend on the SMTP server configuration and hence others may be used.
  * @global int $g_smtp_port
  */
-$g_smtp_port = 25;                        
+$g_smtp_port = 587;                        
 
 
 /**
