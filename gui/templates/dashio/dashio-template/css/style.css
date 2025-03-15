@@ -3529,7 +3529,8 @@ hr.testcase-step-splitter{
 
 /* 編集メニュー */
 #tsuite_control_panel button,
-#tcView_viewer_tcase_control_panel button{
+.tcView_viewer_tcase_control_panel button,
+#tproject_control_panel button{
     background-color: transparent;
 }
 #tsuite_control_panel span.testsuite,
