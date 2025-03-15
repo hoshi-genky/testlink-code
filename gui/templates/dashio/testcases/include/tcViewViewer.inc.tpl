@@ -207,7 +207,7 @@ viewer for test case in test specification
         {* execution history *}
       	<span>
            <i class="fa-solid fa-list-check" title="{$tcView_viewer_labels.btn_show_exec_history}" 
-              onclick="javascript:openExecHistoryWindow({$args_testcase.testcase_id},1);"> 履歴 </i>
+              onclick="javascript:openExecHistoryWindow({$args_testcase.testcase_id},1,{$gui->tproject_id});"> 履歴 </i>
         </span>
         </span>
       </fieldset>
