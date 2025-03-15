@@ -216,6 +216,7 @@ viewer for test case in test specification
 
     {* START TCV SECTION *}
     <fieldset class="groupBtn" style="display:inline-block">
+      <span class="tc_version">
     	<b>{$tcView_viewer_labels.testcase_version_operations}</b>
       <form style="display: inline;" id="versionControls" name="versionControls" method="post" action="{$basehref}lib/testcases/tcEdit.php">
       	<input type="hidden" name="testcase_id" id="versionControls_testcase_id" value="{$args_testcase.testcase_id}" />
@@ -232,7 +233,7 @@ viewer for test case in test specification
           <button style="border:0;" name="edit_tc" 
             onclick="doAction.value='edit';{$gui->submitCode}" value="{$tcView_viewer_labels.btn_edit}">
             <i class="fas fa-pencil-alt" 
-               title="{$tcView_viewer_labels.btn_edit}"></i>
+               title="{$tcView_viewer_labels.btn_edit}"> 編集 </i>
           </button>
       	{/if}
 
@@ -245,13 +246,13 @@ viewer for test case in test specification
              {if $gui->new_version_source == 'this'}
                 <button style="border:0;" name="do_create_new_version" id="do_create_new_version"
                   onclick="doAction.value='do_create_new_version'" value="{$tcView_viewer_labels.btn_new_version}">
-                  <i class="fas fa-plus-circle" title="{$tcView_viewer_labels.btn_new_version}"></i>
+                  <i class="fas fa-plus-circle" title="{$tcView_viewer_labels.btn_new_version}"> 追加 </i>
                 </button>
              {/if}
              {if $gui->new_version_source == 'latest'}
                 <button style="border:0;" name="do_create_new_version_from_latest" id="do_create_new_version_from_latest"
                   onclick="doAction.value='do_create_new_version_from_latest'" value="{$tcView_viewer_labels.btn_new_version_from_latest}">
-                  <i class="fas fa-plus-circle" title="{$tcView_viewer_labels.btn_new_version_from_latest}"></i>
+                  <i class="fas fa-plus-circle" title="{$tcView_viewer_labels.btn_new_version_from_latest}"> 追加 </i>
                 </button>
              {/if}
           {/if}
@@ -270,9 +271,9 @@ viewer for test case in test specification
                 {$icon="fa-solid fa-ice-cream"}
         		  {/if}
 
-             <button type="submit" style="border:0;" 
+             <button type="submit" style="border:0;"
                 onclick="doAction.value='{$freeze_btn}';{$gui->submitCode}">
-               <i class="{$icon}" style="padding:1px 6px;" title="{lang_get s=$freeze_value}"></i>
+               <i class="{$icon}" style="padding:1px 6px;" title="{lang_get s=$freeze_value}"> 凍結 </i>
              </button>
 
 
@@ -291,7 +292,7 @@ viewer for test case in test specification
 
             <button type="submit" style="border:0;" name="delete_tc_version" id="delete_tc_version" 
                     value="{$tcView_viewer_labels.btn_del_this_version}" >
-              <i class="fas fa-times-circle" title="{$tcView_viewer_labels.btn_del_this_version}"></i>
+              <i class="fas fa-times-circle" title="{$tcView_viewer_labels.btn_del_this_version}"> 削除 </i>
             </button>
 
         	{/if}
@@ -313,7 +314,7 @@ viewer for test case in test specification
 
               <button style="border:0;" name="addTc2Tplan_{$args_testcase.id}" id="addTc2Tplan_{$args_testcase.id}"
                 onclick="addTc2Tplan_{$args_testcase.id}" value="{$tcView_viewer_labels.btn_add_to_testplans}">
-                <i class="fa-solid fa-cube" title="{$tcView_viewer_labels.btn_add_to_testplans}"></i>
+                <i class="fa-solid fa-cube" title="{$tcView_viewer_labels.btn_add_to_testplans}"> 計画追加 </i>
               </button>
         	  </form>
         	</span>
@@ -327,7 +328,7 @@ viewer for test case in test specification
             <input type="hidden" name="tplan_id" value="{$gui->tplan_id}" />
 
             <button style="border:0;">
-              <i class="fas fa-file-export" style="padding:1px 6px;" name="export_tc" title="{$tcView_viewer_labels.btn_export}"></i>
+              <i class="fas fa-file-export" style="padding:1px 6px;" name="export_tc" title="{$tcView_viewer_labels.btn_export}"> 書出 </i>
             </button>
 
       	  </form>
@@ -335,7 +336,7 @@ viewer for test case in test specification
           <form style="display: inline;" id="tcprint" name="tcprint" method="post" action="" >
             {* button type="button" -> to avoid automatic SUBMIT *}
             <button type="button" style="border:0;" onclick="javascript:openPrintPreview('tc',{$args_testcase.testcase_id},{$args_testcase.id},null,'{$printTestCaseAction}');">
-              <i class="fa fa-eye" style="padding:1px 6px;" name="tcPrinterFriendly" title="{$tcView_viewer_labels.btn_print_view}"></i>
+              <i class="fa fa-eye" style="padding:1px 6px;" name="tcPrinterFriendly" title="{$tcView_viewer_labels.btn_print_view}"> プレビュー </i>
             </button>
           </form>
 
@@ -357,6 +358,7 @@ viewer for test case in test specification
           {/if}
       	</span>
       {/if}
+      </span>
     </fieldset>
     {* End TCV SECTION *}
 

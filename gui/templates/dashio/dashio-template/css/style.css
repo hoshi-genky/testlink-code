@@ -3545,12 +3545,16 @@ hr.testcase-step-splitter{
     padding: 5px;
     border: 1px solid #00b;
 }
+#tsuite_control_panel span.tc_version{
+    background-color: #E9FFD3;
+    padding: 5px;
+    border: 1px solid #00b;
+}
 
-
-#delete_testsuite, #delete_testcases, #delete_tc{
+#delete_testsuite, #delete_testcases, #delete_tc, #delete_tc_version{
     color: #D70000;
 }
 
-#new_testsuite, #create_tc, #new_tc{
+#new_testsuite, #create_tc, #new_tc, #do_create_new_version_from_latest{
     color: #00A590;
 }
