@@ -117,7 +117,8 @@ test case export initial page
     		     {else}  onclick="javascript:history.back();" {/if} />
   	</div>
   </form>
-  <a href="/download/import_export.xls">インポート/エクポート用 Excelファイル</a>
+  <br><br>
+  <h3><a href="/download/import_export.xls">インポート/エクポート用 XML-Excel変換</a></h3>
 {else}
 	{$gui->nothing_todo_msg|escape}
 {/if}

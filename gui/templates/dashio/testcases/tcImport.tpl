@@ -83,7 +83,8 @@ Purpose: smarty template - manage import of test cases and test suites
              {else}  onclick="javascript:history.back();" {/if} />
 	</div>
 </form>
-  <h3><a href="/download/import_export.xls">インポート/エクポート用 Excelファイル</a></h3>
+  <br><br>
+  <h3><a href="/download/import_export.xls">インポート/エクポート XML-Excel変換</a></h3>
 
 {else}
   {foreach item=result from=$gui->resultMap}
