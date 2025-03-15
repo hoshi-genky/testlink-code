@@ -543,6 +543,9 @@ table.simple, table.simple_tableruler {
 table.simple td{
 	font-size:		100%;
 }
+table.simple td p{
+	margin: 0px;
+}
 
 table.simple caption, table.simple_tableruler caption{
 	background:     #CCC;
