@@ -35,3 +35,6 @@ iframe.mainFrame {
 	height:100%;
   overflow:hidden;
 }
+div .cke_contents  {
+	min-height:180px;
+}

@@ -1223,7 +1223,7 @@ body.cke_editable{
 body.cke_editable p{
 	margin: 3px;
 }
-.cke_contents  {
+div .cke_contents  {
 	min-height:180px;
 }
 /* ----- END ------------------------------------------------------------------------- */
