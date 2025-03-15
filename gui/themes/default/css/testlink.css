@@ -540,6 +540,9 @@ table.simple, table.simple_tableruler {
 	margin:			5px;
 	width:			99%;
 }
+table.simple td{
+	font-size:		100%;
+}
 
 table.simple caption, table.simple_tableruler caption{
 	background:     #CCC;
