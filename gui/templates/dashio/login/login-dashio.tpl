@@ -82,11 +82,12 @@
             {/foreach}
             <hr>
 
-            {if $gui->user_self_signup}
-              <div class="registration">
+            <div class="registration">
+              {if $gui->user_self_signup}
                 <p><a class="" href="firstLogin.php?viewer=new" id="tl_sign_up">
                   {$labels.new_user_q}
                 </a></p>
+              {/if}
 
                 {* the configured authentication method don't allow 
                    users to reset his/her password *}    
@@ -96,7 +97,6 @@
                   <a href="lostPassword.php?viewer=new" id="tl_lost_password">
                   {$labels.lost_password_q}</a>
                   </p>
-                {/if}
               </div>
             {/if}
 
