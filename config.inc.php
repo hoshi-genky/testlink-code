@@ -592,7 +592,7 @@ $tlCfg->authentication['ldap_automatic_user_creation'] = false;
 
 
 /** Enable/disable Users to create accounts on login page */
-$tlCfg->user_self_signup = TRUE;
+$tlCfg->user_self_signup = false;
 
 /** What happens when Administrator push the Reset Password Button 
   'send_password_by_mail'
