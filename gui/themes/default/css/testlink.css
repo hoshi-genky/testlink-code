@@ -1219,4 +1219,9 @@ td.clickable_edit:hover{
 body.cke_editable{
 	padding-left: 5px;
 }
+
+.cke_editable p {
+	margin: 3px;
+}
 /* ----- END ------------------------------------------------------------------------- */
+
