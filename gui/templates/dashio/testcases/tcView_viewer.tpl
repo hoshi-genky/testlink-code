@@ -208,7 +208,7 @@ viewer for test case in test specification
         {* execution history *}
       	<span>
             <input class="{#BUTTON_CLASS#}" type="button" 
-                   onclick="javascript:openExecHistoryWindow({$args_testcase.testcase_id},1);"
+                   onclick="javascript:openExecHistoryWindow({$args_testcase.testcase_id},1,{$gui->tproject_id});"
                  value="{$tcView_viewer_labels.btn_show_exec_history}" />
         </span>
         </span>
