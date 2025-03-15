@@ -143,6 +143,7 @@ viewer for test case in test specification
 
     {if $allOpOnTCV}
       <fieldset class="groupBtn" style="display:inline-block">
+        <span class="testcase">
     	  <b>{$tcView_viewer_labels.testcase_operations}</b>
         <form style="display: inline;" id="topControls" name="topControls"
           method="post" action="{$basehref}lib/testcases/tcEdit.php">
@@ -209,6 +210,7 @@ viewer for test case in test specification
             <input class="{#BUTTON_CLASS#}" type="button" 
                    onclick="javascript:openExecHistoryWindow({$args_testcase.testcase_id},1);"
                  value="{$tcView_viewer_labels.btn_show_exec_history}" />
+        </span>
         </span>
       </fieldset>
     {/if}
