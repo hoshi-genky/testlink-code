@@ -3494,3 +3494,7 @@ td.clickable_edit{
 td.clickable_edit:hover{
     background-color: #ffff88;
 }
+
+div .label {
+    font-size: 100%;
+}
