@@ -118,7 +118,7 @@ test case export initial page
   	</div>
   </form>
   <br><br>
-  <h3><a href="/download/import_export.xls">インポート/エクポート用 XML-Excel変換</a></h3>
+  <h3><a href="/download/import_export.xls">インポート/エクポート XML-Excel変換</a></h3>
 {else}
 	{$gui->nothing_todo_msg|escape}
 {/if}
