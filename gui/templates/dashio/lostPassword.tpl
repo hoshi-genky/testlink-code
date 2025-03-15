@@ -32,7 +32,7 @@ window.onload=function(){
  		  <div class="messages" style="text-align:center;">{$gui->note|escape}</div>
     	
     	<p class="label">{$labels.login_name}<br />
-    	<input type="text" name="login" id="login" 
+    	<input type="text" name="login" id="login" class="form-control"
     	       size="{#LOGIN_SIZE#}" maxlength="{#LOGIN_MAXLEN#}" /></p>
     	<p><input type="submit" name="editUser" value="{$labels.btn_send}" /></p>
     </form>
