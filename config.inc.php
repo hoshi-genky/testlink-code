@@ -453,7 +453,7 @@ $g_smtp_password    = 'P2vnaSrm';  # password
  * Can be '', 'ssl','tls'
  * @global string $g_smtp_connection_mode
  */
-$g_smtp_connection_mode = 'ssl';
+$g_smtp_connection_mode = '';
 
 /**
  * The smtp port to use.  The typical SMTP ports are 25 and 587.  The port to use
