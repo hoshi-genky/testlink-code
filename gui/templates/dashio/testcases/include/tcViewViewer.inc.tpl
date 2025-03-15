@@ -139,7 +139,7 @@ viewer for test case in test specification
     {/if} 
 
     {if $allOpOnTCV}
-      <fieldset class="groupBtn" style="display:inline-block">
+      <fieldset class="groupBtn" style="display:block">
         <span class="testcase">
     	  <b>{$tcView_viewer_labels.testcase_operations}</b>
         <form style="display: inline;" id="topControls" name="topControls" method="post" action="{$basehref}lib/testcases/tcEdit.php">
@@ -157,21 +157,21 @@ viewer for test case in test specification
       			<input type="hidden" name="containerID" value="{$args_testcase.testsuite_id}" />
             <button type="submit" style="border:0;" name="new_tc" id="new_tc"
                onclick="doAction.value='create';{$gui->submitCode}" value="{$tcView_viewer_labels.btn_new_sibling}">
-               <i class="fas fa-plus-circle" title="{$tcView_viewer_labels.hint_new_sibling}"></i>
+               <i class="fas fa-plus-circle" title="{$tcView_viewer_labels.hint_new_sibling}"> 追加 </i>
             </button>
       		{/if}
 
       		{* Move Copy *}
       		{if $args_can_do->copy == "yes" && $args_can_move_copy == "yes"}
             <button style="border:0;" type="submit" name="move_copy_tc" id="move_copy_tc">
-              <i class="fas fa-copy" title="{$tcView_viewer_labels.btn_mv_cp}"></i>
+              <i class="fas fa-copy" title="{$tcView_viewer_labels.btn_mv_cp}"> 移動/コピー </i>
             </button>
       		{/if}
       	  
       		{* Delete TC *}
       		{if $delete_enabled && $args_can_do->delete_testcase == "yes" && $args_can_delete_testcase == "yes"}
             <button style="border:0;" type="submit" name="delete_tc" id="delete_tc" value="{$tcView_viewer_labels.btn_delete}">
-              <i class="fas fa-times-circle" title="{$tcView_viewer_labels.btn_delete}"></i>
+              <i class="fas fa-times-circle" title="{$tcView_viewer_labels.btn_delete}"> 削除 </i>
             </button>
       		{/if}
         </form> <!-- id="topControls" -->
@@ -184,7 +184,7 @@ viewer for test case in test specification
             <input type="hidden" name="tplan_id" value="{$gui->tplan_id}" />
     
             <button style="border:0;" type="submit" name="bulk_op" value="{$tcView_viewer_labels.btn_bulk}">
-              <i class="fa-solid fa-envelopes-bulk" title="{$tcView_viewer_labels.btn_bulk}"></i>
+              <i class="fa-solid fa-envelopes-bulk" title="{$tcView_viewer_labels.btn_bulk}"> 一括 </i>
             </button>
       	  </form>
       	{/if}
@@ -198,7 +198,7 @@ viewer for test case in test specification
               <input type="hidden" name="tplan_id" value="{$gui->tplan_id}" />
 
               <button style="border:0;" type="submit" name="compare_versions" value="{$tcView_viewer_labels.btn_compare_versions}">
-                <i class="fa-solid fa-code-compare" title="{$tcView_viewer_labels.btn_compare_versions}"></i>
+                <i class="fa-solid fa-code-compare" title="{$tcView_viewer_labels.btn_compare_versions}"> 比較 </i>
               </button>
         		</form>
       	  {/if}
@@ -207,7 +207,7 @@ viewer for test case in test specification
         {* execution history *}
       	<span>
            <i class="fa-solid fa-list-check" title="{$tcView_viewer_labels.btn_show_exec_history}" 
-              onclick="javascript:openExecHistoryWindow({$args_testcase.testcase_id},1);"></i>
+              onclick="javascript:openExecHistoryWindow({$args_testcase.testcase_id},1);"> 履歴 </i>
         </span>
         </span>
       </fieldset>
