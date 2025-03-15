@@ -231,8 +231,11 @@ div.workBack {
 }
 
 /* .label is used to magnify label for active objects */
-.bold, .label {
+div .bold, .label {
 	font-weight:    bold;
+}
+div .label{
+	font-size: 100%;
 }
 
 .italic {
