@@ -40,7 +40,7 @@ CKEDITOR.editorConfig = function( config )
 	[
 		['NumberedList','BulletedList','-',
 		 'JustifyLeft','JustifyCenter','JustifyRight','-',
-		 'Bold','Italic','TextColor','-',
+		 'Bold','Indent','TextColor','-',
 		 'Link','Image','Table']
 	];
 	

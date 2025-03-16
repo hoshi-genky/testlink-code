@@ -849,9 +849,9 @@ $tlCfg->gui->text_editor['all'] = ['type' => 'ckeditor',
 
 // mini toolbar for test case steps edit
 $tlCfg->gui->text_editor['steps_design'] = ['type' => 'ckeditor',
-	                                        'toolbar' => 'TestlinkMini',
+	                                        'toolbar' => 'Full',
                                             'configFile' => 'cfg/tl_ckeditor_config.js',
-                                            'height' => 100];
+                                            'height' => 300];
 
 // 
 $tlCfg->gui->text_editor['preconditions'] = ['type' => 'ckeditor',
