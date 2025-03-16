@@ -254,7 +254,7 @@ Left side menu
             {/if}
               <li>
                 <a 
-                  href="https://it-redmine.genky-aws.com/projects/testlink-manual/issues">
+                  href="https://it-redmine.genky-aws.com/projects/testlink-manual/issues" target="_blank">
                   <i class="fa-solid fa-street-view"></i>
                   <span> 使い方 </span>
                 </a>
