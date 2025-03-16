@@ -3558,3 +3558,9 @@ hr.testcase-step-splitter{
 #new_testsuite, #create_tc, #new_tc, #do_create_new_version_from_latest{
     color: #00A590;
 }
+
+#uploadedFile{
+    font-size:26px;
+    width: 100%;
+    color: #00f;
+}
