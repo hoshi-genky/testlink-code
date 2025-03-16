@@ -252,6 +252,13 @@ Left side menu
                 </a>
               </li>
             {/if}
+              <li>
+                <a 
+                  href="https://it-redmine.genky-aws.com/projects/testlink-manual/issues">
+                  <i class="fa-solid fa-street-view"></i>
+                  <span> 使い方 </span>
+                </a>
+              </li>
           {/if}
         </ul>
         <!-- sidebar menu end-->
