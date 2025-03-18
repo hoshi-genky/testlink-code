@@ -124,8 +124,8 @@ generate a list of TC for adding to Test Plan
     </div> <!-- header-wrap -->
 
 {if $gui->has_tc}
-  <div class="workBack" id="workback">
-    <div style="margin-left: 20px; font-size: smaller;">
+  <div class="workBack" id="workback" style="padding-top:70px">
+    <div style="margin-left: 20px; font-size: normal;">
   	{$gui->status_feeback|escape}<br />
     {if $gui->keywords_filter_feedback != '' }
   			<br />{$labels.note_keyword_filter}: {$gui->keywords_filter_feedback|escape}</p>
