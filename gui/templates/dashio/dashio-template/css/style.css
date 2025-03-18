@@ -422,7 +422,7 @@ ul.sidebar-menu li a.active i {
 }
 
 .header, .footer {
-    min-height: 60px;
+    min-height: 120px;
     padding: 0 15px;
 }
 
