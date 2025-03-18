@@ -58,7 +58,6 @@ generate a list of TC for adding to Test Plan
 				        id="testerID">
 					{html_options options=$gui->testers selected=$gui->testerID}
 				</select>
-			<hr style="margin-top:3px;margin-bottom:3px;"/>
 				{$labels.build_to_assign_on_add}
 				<select name="build_id" id="build_id">
 				{html_options options=$gui->build.items 
@@ -147,7 +146,7 @@ generate a list of TC for adding to Test Plan
   		<div id="{$div_id}"  style="margin:0px 0px 0px {$ts.level}0px;">
         <h2 class="testlink">{$ts.testsuite.name|escape}</h2> 
         {if $item_number == 1}
-          <hr />
+			<hr style="margin-top:3px;margin-bottom:3px;"/>
         {/if} {* $item_number == 1 *}
      
         {* used as memory for the check/uncheck all checkbox javascript logic *}
