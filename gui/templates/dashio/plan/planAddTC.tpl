@@ -58,17 +58,19 @@ generate a list of TC for adding to Test Plan
 				        id="testerID">
 					{html_options options=$gui->testers selected=$gui->testerID}
 				</select>
-				
+			<hr style="margin-top:3px;margin-bottom:3px;"/>
 				{$labels.build_to_assign_on_add}
 				<select name="build_id" id="build_id">
 				{html_options options=$gui->build.items 
 				              selected=$gui->build.selected}
 				</select>
+			<hr style="margin-top:3px;margin-bottom:3px;"/>
 		
 				<input type="checkbox" name="send_mail" id="send_mail" {$gui->send_mail_checked}/>
 				{$labels.send_mail_to_tester}
 			
 		</div>
+		<hr style="margin-top:3px;margin-bottom:3px;"/>
 
 		{/if} {* if $gui->build.count *}
 		{* --------------------------------------------------------------- *}
@@ -92,6 +94,7 @@ generate a list of TC for adding to Test Plan
 				<button class="{#BUTTON_CLASS#}"
                onclick="cs_all_checkbox_in_div_with_platform('addTcForm', '{$rm_cb}', jQuery('#select_platform').val()); return false;">{$labels.removal_tc}</button>
 			</div>
+
 	  	  	<input type="hidden" name="doAction" id="doAction" value="default" />
 	  	  	<input class="{#BUTTON_CLASS#}" type="submit" 
                  name="doAddRemove" id="doAddRemove"
@@ -118,7 +121,7 @@ generate a list of TC for adding to Test Plan
 	  	  </div>
       {else}
 	    <div class="info">{$labels.no_testcase_available}</div>
-	  	{/if}  
+		{/if}  
 
     </div> <!-- header-wrap -->
 
