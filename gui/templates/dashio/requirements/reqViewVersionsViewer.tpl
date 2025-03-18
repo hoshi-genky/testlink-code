@@ -42,6 +42,7 @@ viewer for requirement
     <span class="tooltip-text">コピー</span>
     <br/>
   </div>
+  <hr style="margin-top:3px;margin-bottom:3px;"/>
 {/if}
 
 <div style="display: {$tlCfg->gui->op_area_display->req};" class="groupBtn" 

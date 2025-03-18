@@ -49,6 +49,7 @@ Ext.onReady(function() {ldelim}
   {$gui->direct_link}
 {/if}
 </div>
+<hr style="margin-top:3px;margin-bottom:3px;"/>
 <p><form method="post">
 <input type="checkbox" name="show_only_active" value="show_only_active"
        {if $gui->show_only_active} checked="checked" {/if}

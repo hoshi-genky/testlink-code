@@ -145,7 +145,7 @@ function validateFormEstimatedExecDuration(the_form)
         <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}')">{$gui->direct_link}</a>
         <span class="tooltip-text">コピー</span>
       </div>
-
+      <hr style="margin-top:3px;margin-bottom:3px;"/>
       {include file="{$tplConfig['tcViewViewer.inc']}"  
               args_aliens_map = $gui->currentVersionAliens
               args_tcase_operations_enabled="yes"

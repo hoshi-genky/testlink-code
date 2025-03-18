@@ -105,6 +105,7 @@ Purpose: view a requirement specification
       <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('{$gui->direct_link}')">{$gui->direct_link}</a>
       <span class="tooltip-text">コピー</span>
     </div>
+    <hr style="margin-top:3px;margin-bottom:3px;"/>
   {/if}
 {if $gui->req_spec.id}
 <img class="clickable" src="{$tlImages.cog}" onclick="javascript:toogleShowHide('control_panel');"

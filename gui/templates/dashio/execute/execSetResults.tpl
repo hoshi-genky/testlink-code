@@ -247,7 +247,7 @@ file_upload_ko,pleaseOpenTSuite'}
       {$gui->direct_link}</a>
       <span class="tooltip-text">コピー</span>
       </div>
-
+      <hr style="margin-top:3px;margin-bottom:3px;"/>
       
       <input class="{#BUTTON_CLASS#}" type="button" 
              name="print" id="print" 

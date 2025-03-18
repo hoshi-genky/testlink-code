@@ -293,6 +293,7 @@ var {$gui->dialogName} = new std_dialog('&refreshTree');
     <a href="{$gui->direct_link}" target="_blank">{$labels.current_direct_link}</a><br/>
     <a href="{$gui->direct_link}&version={$gui->current_version[idx][0].version}" target="_blank">{$labels.specific_direct_link}</a><br/>
     </div>
+    <hr style="margin-top:3px;margin-bottom:3px;"/>
 
   {* Current *}
   {include file="$this_template_dir/reqViewVersionsViewer.tpl" 
