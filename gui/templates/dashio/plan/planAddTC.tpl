@@ -39,7 +39,7 @@ generate a list of TC for adding to Test Plan
 <form name="addTcForm" id="addTcForm" method="post" 
       onSubmit="javascript:return checkDelete(js_remove_executed_counter);">
 
-   <div class="workBack" id="header-wrap">
+   <div class="headerWrap" id="header-wrap">
 	  	<h1 class="{#TITLE_CLASS#}">{$gui->pageTitle|escape}
 	  	{include file="inc_help.tpl" helptopic="hlp_planAddTC" show_help_icon=true}
 	  	</h1>
