@@ -63,7 +63,6 @@ generate a list of TC for adding to Test Plan
 				{html_options options=$gui->build.items 
 				              selected=$gui->build.selected}
 				</select>
-			<hr style="margin-top:3px;margin-bottom:3px;"/>
 		
 				<input type="checkbox" name="send_mail" id="send_mail" {$gui->send_mail_checked}/>
 				{$labels.send_mail_to_tester}
