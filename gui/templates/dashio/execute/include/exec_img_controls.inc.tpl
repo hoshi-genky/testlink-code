@@ -43,42 +43,41 @@ Author : franciscom
     							        checked="checked" 
     							    {/if} /> &nbsp;{lang_get s=$locale_status}<br />
     					  {/foreach}
+                 <hr style="margin-top:3px;margin-bottom:3px;"/>
               {/if}
 
               {if $tlCfg->exec_cfg->features->exec_duration->enabled}	
-                <br />	
-                <img src="{$tlImages.execution_duration}" 
-                       title="{$args_labels.execution_duration}">
+                実行時間: <img src="{$tlImages.execution_duration}" 
+                       title="{$args_labels.execution_duration}"> 
                 <input type="text" name="execution_duration" id="execution_duration"
                        size="{#EXEC_DURATION_SIZE#}" 
                        onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
                        maxlength="{#EXEC_DURATION_MAXLEN#}">  
                 {/if}       		 			
               {if $args_save_type == 'single'}
-                <br />
-                <br />
+                <hr style="margin-top:3px;margin-bottom:3px;"/>
                 {$addBR=0}
                 {if $tc_exec.assigned_user == ''}
-                 <img src="{$tlImages.assign_task}" 
+                 自分に割当てる: <img src="{$tlImages.assign_task}" 
                        title="{$args_labels.assign_exec_task_to_me}">
-                  <input type="checkbox" name="assignTask"  id="assignTask"
+                  <input type="checkbox" name="assignTask"  id="assignTask" style="width:20px;height:20px;"
                   {if $gui->assignTaskChecked} checked {/if}>
                   &nbsp;
                 {/if}
 
                 {if $tlCfg->exec_cfg->exec_mode->new_exec == 'latest'}
+                  <hr style="margin-top:3px;margin-bottom:3px;"/>
                   {$addBR=1}
-                 <img src="{$tlImages.copy_attachments}" 
-                       title="{$args_labels.copy_attachments_from_latest_exec}">
+                 最新の実行から添付ファイルをコピーする <img src="{$tlImages.copy_attachments}" 
+                       title="{$args_labels.copy_attachments_from_latest_exec}"> 
                   <input type="checkbox" name="copyAttFromLEXEC"  id="copyAttFromLEXEC">
-                  &nbsp;
+                  &nbsp;                
                 {/if}
 
-
-                
                 {if $gui->tlCanCreateIssue}
+                  <hr style="margin-top:3px;margin-bottom:3px;"/>
                   {$addBR=1}
-                  <img src="{$tlImages.bug_create_into_bts}" 
+                  課題を登録: <img src="{$tlImages.bug_create_into_bts}" 
                        title="{$args_labels.bug_create_into_bts}">
                   <input type="checkbox" name="createIssue"  id="createIssue" 
                          onclick="javascript:toogleShowHide('issue_summary');
@@ -89,18 +88,17 @@ Author : franciscom
                 {/if}
 
                 {if $tlCfg->exec_cfg->copyLatestExecIssues->enabled}
-                  {if $addBR}<br>{/if}
-                  {$args_labels.bug_copy_from_latest_exec}&nbsp;
-                   <input type="checkbox" name="copyIssues[{$tcvID}]" id="copyIssues" 
+                  <hr style="margin-top:3px;margin-bottom:3px;"/>
+                  {$args_labels.bug_copy_from_latest_exec}: 
+                   <input type="checkbox" name="copyIssues[{$tcvID}]" id="copyIssues" style="width:20px;height:20px;"
                     {if $tlCfg->exec_cfg->copyLatestExecIssues->default} checked {/if}>
-                   <br />
                 {/if}
 
                  <input type="hidden" name="statusSingle[{$tcversion_id}]" 
                         id="statusSingle_{$tcversion_id}" value="">
                  <input type="hidden" name="save_results" id="save_results" value="0">
-                 <br />
-                 <br />
+                <hr style="margin-top:3px;margin-bottom:3px;"/>
+
                  <button style="display: none;" type="submit" 
                          id="hidden-submit-button"></button>
                  {foreach key=kode item=ikval from=$gui->execStatusIcons}
@@ -108,11 +106,12 @@ Author : franciscom
                    <img src="{$tlImages.$in}" title="{$ikval.title}"
                         name="fastExec{$kode}[{$tcversion_id}]"
                         id="fastExec{$kode}_{$tcversion_id}"
-                        onclick="javascript:saveExecStatus({$tcvID},'{$kode}');">&nbsp;
+                        onclick="javascript:saveExecStatus({$tcvID},'{$kode}');"
+                        style="height:25px;width:25px;"> <a href="javascript:void(0)" onclick="javascript:saveExecStatus({$tcvID},'{$kode}');"> 
+                        {$ikval.title} </a>
+                  <hr style="margin-top:3px;margin-bottom:3px;"/>
+                
                  {/foreach}  
-                 <br />
-                 <br />
-
                  <input type="hidden" name="save_and_next" 
                                       id="save_and_next" value="0">
                  {foreach key=kode item=ikval from=$gui->execStatusIconsNext}
@@ -120,10 +119,11 @@ Author : franciscom
                    <img src="{$tlImages.$in}" title="{$ikval.title}"
                         name="fastExecNext{$kode}[{$tcversion_id}]"
                         id="fastExecNext{$kode}_{$tcversion_id}"
-                        onclick="javascript:saveExecStatus({$tcvID},'{$kode}','',1);">&nbsp;
+                        onclick="javascript:saveExecStatus({$tcvID},'{$kode}','',1);"
+                        style="height:25px;width:25px;"> <a href="javascript:void(0)" onclick="javascript:saveExecStatus({$tcvID},'{$kode}');"> 
+                        {$ikval.title} </a>
+                  <hr style="margin-top:3px;margin-bottom:3px;"/>
                  {/foreach}  
-                 <br />
-                 <br />
                   <input type="submit" name="move2next[{$tcvID}]" 
                       {$args_input_enable_mgmt}
                       onclick="javascript:moveToNextTC({$tcvID});"
