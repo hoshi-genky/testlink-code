@@ -115,7 +115,7 @@ var warning_delete_attachment = "{lang_get s='warning_delete_attachment'}";
         </td>
       </tr>
       <tr><td id="inline_img_container_{$info.id}" style="vertical-align:middle;">
-        <img src="lib/attachments/attachmentdownload.php?id='{$info.id}'"/>
+        <img src="lib/attachments/attachmentdownload.php?id={$info.id}"/>
       </td></tr>  {* to display images inline on user request *}
     {/foreach}
   </table>
