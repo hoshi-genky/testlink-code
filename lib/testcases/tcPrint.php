@@ -133,6 +133,8 @@ function copyTextFallback(str){
     if (!str || typeof str !== 'string') {
         return '';
     }
+    let regex = /&nbsp;/ig;
+    str = str.replace(regex,' ');
     const textarea = document.createElement('textarea');
     textarea.id = 'tmp_copy';
     textarea.style.position = 'fixed';
