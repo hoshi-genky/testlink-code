@@ -12,6 +12,7 @@
  */
 
 require_once("../../config.inc.php");
+require_once("../../cfg/const.inc.php"); 
 require_once("../../cfg/reports.cfg.php"); 
 require_once("print.inc.php"); 
 require_once("common.php");
@@ -49,9 +50,17 @@ $level = 0;
 $tplanID = 0;
 $prefix = null;
 $text2print = '';
-$text2print .= renderHTMLHeader($gui->page_title,$_SESSION['basehref'],
-                                SINGLE_TESTCASE,array('gui/javascript/testlink_library.js'));
 
+$basehref = $_SESSION['basehref'];
+$smarty = new TLSmarty();
+$text2print .= renderHTMLHeader($gui->page_title,$_SESSION['basehref'],
+                                SINGLE_TESTCASE,
+                                array('gui/javascript/testlink_library.js'
+                                ,"third_party/jquery/jquery-3.4.1.min.js")
+                              );
+                              // <script type="text/javascript" 
+                              // src="{$basehref}{$smarty.const.TL_JQUERY}" 
+                              // language="javascript"></script>
 $env = new stdClass();
 $env->base_href = $_SESSION['basehref'];
 $env->reportType = $printingOptions['docType'];
@@ -59,9 +68,98 @@ $env->reportType = $printingOptions['docType'];
 $text2print .= renderTestCaseForPrinting($db,$node,$printingOptions,$env,
                                          array('level' => $level,'tplan_id' => $tplanID,
                                                'tproject_id' => $args->tproject_id,'prefix' => $prefix),$level);
-
 echo $text2print;
+?>
 
+<script type="text/javascript"><!--
+
+$(function () {
+  setTimeout(onInitClickCopy,300);
+});
+
+function onInitClickCopy(){
+    if($('tr td div')[0]){
+       //console.log("find");
+       $('tr td div').click(onClickWikiPre).css("cursor","pointer");
+         
+    }
+}
+function onClickWikiPre(){
+    console.log("click text: " + $(this).text());
+    let copyText = $(this).text();
+        if (!navigator.clipboard) {
+            // navigator.clipboardが利用的出来ない場合は、フォールバックなコードを実行
+            copyTextFallback(copyText);
+            dispMsg(this, `コピーしました。`);
+            return;
+        }
+        // https環境で動作するコード
+        navigator.clipboard.writeText(copyText).then(
+            () => {
+                dispMsg(this, `コピーしました。`);
+            },
+            () => {
+                dispMsg(this, 'コピーに失敗しました。');
+            }
+        );
+}
+
+function dispMsg(target, txt){
+   if(!$(target).parent().find(".ret-msg")[0]){
+      $(target).parent().append("<span class='ret-msg'>" + txt + "</span>");
+   }
+   let pre = $(target);
+   let pos = pre.position();
+   let top = $(window).scrollTop() + ($(window).height()*0.4);
+
+   let left = parseInt(pos.left) + 50;
+   console.log("top: " + top + ", left" + left);
+
+   let msg = $(target).parent().find(".ret-msg");
+   msg.css("display", "block");
+   msg.css("position", "absolute");
+   msg.css("left", "30%");
+   msg.css("top", top + "px");
+   msg.css("opacity", ".7");
+   msg.css("background-color", "#333");
+   msg.css("color", "#fff");
+   msg.css("font-size", "36px");
+   msg.delay(2000).fadeOut("slow");
+}
+
+
+// http環境で動くコピーコード
+function copyTextFallback(str){
+    if (!str || typeof str !== 'string') {
+        return '';
+    }
+    const textarea = document.createElement('textarea');
+    textarea.id = 'tmp_copy';
+    textarea.style.position = 'fixed';
+    textarea.style.right = '100vw';
+    textarea.style.fontSize = '16px';
+    textarea.setAttribute('readonly', 'readonly');
+    textarea.textContent = str;
+    document.body.appendChild(textarea);
+    const elm = document.getElementById('tmp_copy'); // as HTMLTextAreaElement;
+    elm.select();
+    const range = document.createRange();
+    range.selectNodeContents(elm);
+    const sel = window.getSelection();
+    if (sel) {
+        sel.removeAllRanges();
+        sel.addRange(range);
+    }
+    elm.setSelectionRange(0, 999999);
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+
+    return str;
+}
+
+--></script>
+
+<?php
 /*
   function: init_args
 
