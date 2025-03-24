@@ -87,21 +87,23 @@ function onInitClickCopy(){
 function onClickWikiPre(){
     console.log("click text: " + $(this).text());
     let copyText = $(this).text();
-        if (!navigator.clipboard) {
-            // navigator.clipboardが利用的出来ない場合は、フォールバックなコードを実行
-            copyTextFallback(copyText);
+    let regex = /[ ]/ig;
+    copyText = copyText.replace(regex,' ');
+    if (!navigator.clipboard) {
+        // navigator.clipboardが利用的出来ない場合は、フォールバックなコードを実行
+        copyTextFallback(copyText);
+        dispMsg(this, `コピーしました。`);
+        return;
+    }
+    // https環境で動作するコード
+    navigator.clipboard.writeText(copyText).then(
+        () => {
             dispMsg(this, `コピーしました。`);
-            return;
+        },
+        () => {
+            dispMsg(this, 'コピーに失敗しました。');
         }
-        // https環境で動作するコード
-        navigator.clipboard.writeText(copyText).then(
-            () => {
-                dispMsg(this, `コピーしました。`);
-            },
-            () => {
-                dispMsg(this, 'コピーに失敗しました。');
-            }
-        );
+    );
 }
 
 function dispMsg(target, txt){
@@ -133,8 +135,6 @@ function copyTextFallback(str){
     if (!str || typeof str !== 'string') {
         return '';
     }
-    let regex = /&nbsp;/ig;
-    str = str.replace(regex,' ');
     const textarea = document.createElement('textarea');
     textarea.id = 'tmp_copy';
     textarea.style.position = 'fixed';
