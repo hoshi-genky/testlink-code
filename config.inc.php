@@ -1625,7 +1625,7 @@ $g_repositoryCompressionType = TL_REPOSITORY_COMPRESSIONTYPE_NONE;
 
 // the maximum allowed file size for each repository entry, default 1MB.
 // Also check your PHP settings (default is usually 2MBs)
-$tlCfg->repository_max_filesize = 1; //MB
+$tlCfg->repository_max_filesize = 50; //MB
 
 
 
