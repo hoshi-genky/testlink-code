@@ -158,7 +158,7 @@ var tc_editor = "{$gui->editorType}";
        * expected results get the rest)
        *}
     <th width="45%">{$labels.step_actions}</th>
-      <th>{$labels.expected_results}</th>
+      <th style="min-width:70px;">{$labels.expected_results}</th>
     </tr>
   
   {* this means we have steps to display *}
@@ -219,7 +219,7 @@ var tc_editor = "{$gui->editorType}";
   {* Vertical layout *}
     {foreach from=$gui->tcaseSteps item=step_info}
       <tr id="step_row_{$step_info.step_number}">
-        <th width="20">{$args_labels.step_number} {$step_info.step_number}</th>
+        <th width="20px">{$args_labels.step_number} {$step_info.step_number}</th>
         <th>{$labels.step_actions}</th>
         {if $edit_enabled}
           <th>&nbsp;</th>

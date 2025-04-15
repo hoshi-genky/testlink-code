@@ -171,9 +171,9 @@ var tc_editor = "{$gui->editorType}";
        * expected results get the rest)
        *}
     <th width="45%">{$labels.step_actions}</th>
-      <th>{$labels.expected_results}</th>
+      <th style="min-width:70px;">{$labels.expected_results}</th>
       {if $gui->tprojOpt->automationEnabled}
-        <th width="25">{$labels.execution_type_short_descr}</th>
+        <th style="min-width:50px;">{$labels.execution_type_short_descr}</th>
       {/if}  
     </tr>
   

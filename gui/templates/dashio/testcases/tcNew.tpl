@@ -113,16 +113,16 @@ action="{$basehref}lib/testcases/tcEdit.php?containerID={$gui->containerID}"
   	<tr>
   		<th width="{$tableColspan}">{$labels.step_number}</th>
   		<th>{$labels.step_details}</th>
-  		<th>{$labels.expected_results}</th>
-  		<th width="25">{$labels.execution_type_short_descr}</th>
+  		<th style="min-width:70px;">{$labels.expected_results}</th>
+  		<th style="min-width:50px;">{$labels.execution_type_short_descr}</th>
   	</tr>
   
    	{foreach from=$gui->steps item=step_info}
   	<tr>
   		<td style="text-align:righ;">{$step_info.step_number}</td>
   		<td >{$step_info.actions}</td>
-  		<td >{$step_info.expected_results}</td>
-  		<td>{$gui->execution_types[$step_info.execution_type]}</td>
+  		<td style="min-width:70px;">{$step_info.expected_results}</td>
+  		<td style="min-width:50px;">{$gui->execution_types[$step_info.execution_type]}</td>
   	</tr>
     {/foreach}	
   </table>	
