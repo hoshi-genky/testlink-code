@@ -278,7 +278,7 @@ var tc_editor = "{$gui->editorType}";
       </tr>
       <tr>
         <th style="background: transparent; border: none"></th>
-        <th colspan="2">{$labels.expected_results}</th>
+        <th colspan="2" style="min-width:70px;">{$labels.expected_results}</th>
       </tr>
       <tr>
         <td>&nbsp;</td>
@@ -325,7 +325,7 @@ var tc_editor = "{$gui->editorType}";
         </tr>
         <tr>
           <th style="background: transparent; border: none"></th>
-          <th colspan="2">{$labels.expected_results}</th>
+          <th colspan="2" style="min-width:70px;">{$labels.expected_results}</th>
         </tr>
         <tr>
           <td>&nbsp;</td>
