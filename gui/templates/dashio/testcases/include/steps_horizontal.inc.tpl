@@ -175,3 +175,93 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     {/if}
 
   {/foreach}
+
+<script type="text/javascript"><!--
+
+$(function () {
+  setTimeout(onInitClickCopy,300);
+});
+
+function onInitClickCopy(){
+    let key = 'td.td_steps_horizontal_inc div';
+    if($(key)[0]){
+       //console.log("find");
+       $(key).click(onClickWikiPre).css("cursor","pointer");
+    }
+}
+function onClickWikiPre(){
+    console.log("click text: " + $(this).text());
+    let copyText = $(this).text();
+    let regex = /[ ]/ig;
+    copyText = copyText.replace(regex,' ');
+    if (!navigator.clipboard) {
+        // navigator.clipboardが利用的出来ない場合は、フォールバックなコードを実行
+        copyTextFallback(copyText);
+        dispMsg(this, `コピーしました。`);
+        return;
+    }
+    // https環境で動作するコード
+    navigator.clipboard.writeText(copyText).then(
+        () => {
+            dispMsg(this, `コピーしました。`);
+        },
+        () => {
+            dispMsg(this, 'コピーに失敗しました。');
+        }
+    );
+}
+
+function dispMsg(target, txt){
+   if(!$(target).parent().find(".ret-msg")[0]){
+      $(target).parent().append("<span class='ret-msg'>" + txt + "</span>");
+   }
+   let pre = $(target);
+   let pos = pre.position();
+   let top = $(window).scrollTop() + ($(window).height()*0.4);
+
+   let left = parseInt(pos.left) + 50;
+   console.log("top: " + top + ", left" + left);
+
+   let msg = $(target).parent().find(".ret-msg");
+   msg.css("display", "block");
+   msg.css("position", "absolute");
+   msg.css("left", "30%");
+   msg.css("top", top + "px");
+   msg.css("opacity", ".7");
+   msg.css("background-color", "#333");
+   msg.css("color", "#fff");
+   msg.css("font-size", "36px");
+   msg.delay(2000).fadeOut("slow");
+}
+
+
+// http環境で動くコピーコード
+function copyTextFallback(str){
+    if (!str || typeof str !== 'string') {
+        return '';
+    }
+    const textarea = document.createElement('textarea');
+    textarea.id = 'tmp_copy';
+    textarea.style.position = 'fixed';
+    textarea.style.right = '100vw';
+    textarea.style.fontSize = '16px';
+    textarea.setAttribute('readonly', 'readonly');
+    textarea.textContent = str;
+    document.body.appendChild(textarea);
+    const elm = document.getElementById('tmp_copy'); // as HTMLTextAreaElement;
+    elm.select();
+    const range = document.createRange();
+    range.selectNodeContents(elm);
+    const sel = window.getSelection();
+    if (sel) {
+        sel.removeAllRanges();
+        sel.addRange(range);
+    }
+    elm.setSelectionRange(0, 999999);
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+
+    return str;
+}
+
+--></script>
