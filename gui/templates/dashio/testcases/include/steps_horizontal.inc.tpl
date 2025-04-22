@@ -75,7 +75,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     </td>
     <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" class="clickable_edit" onclick="launchEditStep({$step_info.id})" 
         {else}
-            class="display_actions"
+            class="display_actions td_steps_horizontal_inc"
         {/if}>
         {if $gui->stepDesignEditorType == 'none'}
             {$step_info.actions|nl2br}
@@ -85,7 +85,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     </td>
     <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" class="clickable_edit" onclick="launchEditStep({$step_info.id})" 
         {else}
-            class="display_expected_results"
+            class="display_expected_results td_steps_horizontal_inc"
         {/if}>
         {if $gui->stepDesignEditorType == 'none'}
             {$step_info.expected_results|nl2br}
