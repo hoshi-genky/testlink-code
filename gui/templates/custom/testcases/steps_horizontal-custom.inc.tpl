@@ -70,9 +70,26 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
       </span>
       {$step_info.step_number}
     </td>
-    <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" onclick="launchEditStep({$step_info.id})" {/if}>{if $gui->stepDesignEditorType == 'none'}{$step_info.actions|nl2br}{else}{$step_info.actions}{/if}
+    <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" onclick="launchEditStep({$step_info.id})" 
+      {else}
+          class="display_actions"
+      {/if}>
+      {if $gui->stepDesignEditorType == 'none'}
+        {$step_info.actions|nl2br}
+      {else}
+        {$step_info.actions}
+      {/if}
     </td>
-    <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" onclick="launchEditStep({$step_info.id})" {/if}>{if $gui->stepDesignEditorType == 'none'}{$step_info.expected_results|nl2br}{else}{$step_info.expected_results}{/if}</td>
+    <td {if $edit_enabled && $args_frozen_version=="no"} style="cursor:pointer;" onclick="launchEditStep({$step_info.id})" 
+      {else}
+            class="display_expected_results"
+      {/if}>
+      {if $gui->stepDesignEditorType == 'none'}
+        {$step_info.expected_results|nl2br}
+      {else}
+        {$step_info.expected_results}
+      {/if}
+    </td>
 
     {if $edit_enabled && $args_frozen_version=="no"}
     <td class="clickable_icon">
