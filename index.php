@@ -148,14 +148,16 @@ function initGui(&$dbH,&$argsObj) {
   
   $gui->tproject_id = $argsObj->tproject_id;
   $gui->tplan_id = $argsObj->tplan_id;
-
-  if(empty($argsObj->tproject_id)){
-    // 指定無し -> Cookie採用
-    $gui->tproject_id = $_COOKIE["tproject_id"];
-    $gui->tplan_id = $_COOKIE["tplan_id"];
-  }else{// 指定あり
-    setCookie('tproject_id',$argsObj->tproject_id,time() + 3600 * 24 * 30);
-    setCookie('tplan_id',$argsObj->tplan_id,time() + 3600 * 24 * 30);
+  if ($_GET["action"] != "projectChange" &&
+      $_GET["action"] != "planChange" ){
+    if(empty($argsObj->tproject_id)){
+      // 指定無し -> Cookie採用
+      $gui->tproject_id = $_COOKIE["tproject_id"];
+      $gui->tplan_id = $_COOKIE["tplan_id"];
+    }else{// 指定あり
+      setCookie('tproject_id',$argsObj->tproject_id,time() + 3600 * 24 * 30);
+      setCookie('tplan_id',$argsObj->tplan_id,time() + 3600 * 24 * 30);
+    }
   }
 
   $gui->titleframe = "lib/general/navBar.php?" . 
