@@ -17,7 +17,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
   {/if}  
 
   <tr class="testcase-header">
-    <th width="60px"><nobr>
+    <th style="min-width:30px;"><nobr>
     {if $edit_enabled && $steps != '' && !is_null($steps) && $args_frozen_version=="no"}
       <img class="clickable" src="{$tlImages.reorder}" align="left"
            title="{$inc_steps_labels.show_hide_reorder}"
@@ -28,15 +28,18 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     {/if}
     {$inc_steps_labels.step_number}
     </th>
-    <th>{$inc_steps_labels.step_actions}
+    <!-- ステップ -->
+    <th style="min-width:80px;">{$inc_steps_labels.step_actions}
     </th>
-    <th>{$inc_steps_labels.expected_results}</th>
+    <!-- 期待結果 -->
+    <th style="min-width:80px;">{$inc_steps_labels.expected_results}</th>
     {if $gui->tprojOpt->automationEnabled}
-    <th width="70px">{$inc_steps_labels.execution_type_short_descr}</th>
+    <!-- 実行方法 -->
+    <th style="min-width:60px;">{$inc_steps_labels.execution_type_short_descr}</th>
     {/if}
     {if $edit_enabled}
-    <th width="40px">削除</th>
-    <th width="40px">追加</th>
+    <th style="min-width:40px;">削除</th>
+    <th style="min-width:40px;">追加</th>
     {/if}
 
     {if $inExec}
