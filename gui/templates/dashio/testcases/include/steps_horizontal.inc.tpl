@@ -35,7 +35,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     <th style="min-width:80px;">{$inc_steps_labels.expected_results}</th>
     {if $gui->tprojOpt->automationEnabled}
     <!-- 実行方法 -->
-    <th style="min-width:60px;">{$inc_steps_labels.execution_type_short_descr}</th>
+    <th style="min-width:70px;">{$inc_steps_labels.execution_type_short_descr}</th>
     {/if}
     {if $edit_enabled}
     <th style="min-width:40px;">削除</th>
