@@ -491,6 +491,9 @@ table.simple, table.simple_tableruler {
 }
 table.simple td{
 	font-size:		100%;
+	margin-left: 5px;
+	margin-right: 5px;
+	border: 1px solid #99bbe8;
 }
 table.simple td p{
 	margin: 0px;
