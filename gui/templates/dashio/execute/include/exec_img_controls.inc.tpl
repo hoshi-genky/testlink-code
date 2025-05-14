@@ -120,7 +120,7 @@ Author : franciscom
                         name="fastExecNext{$kode}[{$tcversion_id}]"
                         id="fastExecNext{$kode}_{$tcversion_id}"
                         onclick="javascript:saveExecStatus({$tcvID},'{$kode}','',1);"
-                        style="height:25px;width:25px;"> <a href="javascript:void(0)" onclick="javascript:saveExecStatus({$tcvID},'{$kode}');"> 
+                        style="height:25px;width:25px;"> <a href="javascript:void(0)" onclick="javascript:saveExecStatus({$tcvID},'{$kode}','',1);"> 
                         {$ikval.title} </a>
                   <hr style="margin-top:3px;margin-bottom:3px;"/>
                  {/foreach}  
