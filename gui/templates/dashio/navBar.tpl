@@ -47,7 +47,7 @@ The _top value of the target attribute specifies that the URL should open in the
       </div>
       <a class="logo" 
          href="index.php?tproject_id={$gui->tproject_id}&tplan_id={$gui->tplan_id}" target="{$topBrowsingContext}" title="{$labels.reload_main_view}">
-         <b>TEST<span>LINK</span></b></a> <a class="navbar-link" href="index.php?tproject_id={$gui->tproject_id}&tplan_id={$gui->tplan_id}">tproject_id: {$gui->tproject_id}, tplan_id: {$gui->tplan_id}</a>
+         <b>TEST<span>LINK</span></b></a> <a class="navbar-link" target="{$topBrowsingContext}" href="index.php?tproject_id={$gui->tproject_id}&tplan_id={$gui->tplan_id}">tproject_id: {$gui->tproject_id}, tplan_id: {$gui->tplan_id}</a>
 
   <div class="top-menu">
         <ul class="nav pull-right top-menu">
