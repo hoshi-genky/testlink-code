@@ -469,6 +469,11 @@ a.logo span {
     color: #4ECDC4;
 }
 
+a.navbar-link{
+    float: left;
+    margin-top: 18px;
+    margin-left: 10px;
+}
 
 /*notification*/
 #top_menu .nav > li, ul.top-menu > li {
