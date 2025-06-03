@@ -89,6 +89,8 @@ function onClickWikiPre(){
     let copyText = $(this).text();
     let regex = /[ ]/ig;
     copyText = copyText.replace(regex,' ');
+    regex = /[\n\n]/ig;
+    copyText = copyText.replace(regex,'\n');
     if (!navigator.clipboard) {
         // navigator.clipboardが利用的出来ない場合は、フォールバックなコードを実行
         copyTextFallback(copyText);
