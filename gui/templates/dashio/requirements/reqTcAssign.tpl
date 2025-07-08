@@ -147,7 +147,7 @@ function refreshAndClose(tcase_id,callback) {
         </td>
     		
         <td><span class="bold">{$gui->assignedReq[row].req_doc_id|escape}</span></td>
-    		<td><span class="bold"><a href="lib/requirements/reqView.php?requirement_id={$gui->assignedReq[row].id}">
+    		<td><span class="bold"><a href="lib/requirements/reqView.php?requirement_id={$gui->assignedReq[row].id}&tproject_id={$gui->tproject_id}">
     			{$gui->assignedReq[row].title|escape}</a></span></td>
 			<td>{if $gui->reqEditorType == 'none'}{$gui->assignedReq[row].scope|nl2br}{else}{$gui->assignedReq[row].scope|strip_tags|strip|truncate:#SCOPE_SHORT_TRUNCATE#}{/if}</td>	
         <td>{$gui->assignedReq[row].coverage_author}</td>
@@ -214,7 +214,7 @@ function refreshAndClose(tcase_id,callback) {
       		           name="req_id[{$freeReq.id}]" /></td>
 
       		<td><span class="bold">{$freeReq.req_doc_id|escape}</span></td>
-      		<td><span class="bold"><a href="lib/requirements/reqView.php?requirement_id={$freeReq.id}&req_version_id={$freeReq.version_id}">
+      		<td><span class="bold"><a href="lib/requirements/reqView.php?requirement_id={$freeReq.id}&req_version_id={$freeReq.version_id}&tproject_id={$gui->tproject_id}">
       			{$freeReq.title|escape} [{$labels.version_short}{$freeReq.version}] </a></span></td>
       		<td>{if $gui->reqEditorType == 'none'}{$freeReq.scope|nl2br}{else}{$freeReq.scope|strip_tags|strip|truncate:#SCOPE_SHORT_TRUNCATE#}{/if}</td>
       	</tr>
