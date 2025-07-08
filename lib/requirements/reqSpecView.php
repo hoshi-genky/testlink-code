@@ -104,7 +104,8 @@ function initialize_gui(&$dbHandler,&$argsObj)
 
   $prefix = $tproject_mgr->getTestCasePrefix($argsObj->tproject_id);
   $gui->direct_link = $_SESSION['basehref'] . 'linkto.php?tprojectPrefix=' . urlencode($prefix) . 
-                      '&item=reqspec&id=' . urlencode($gui->req_spec['doc_id']);
+                      '&item=reqspec&id=' . urlencode($gui->req_spec['doc_id']) .
+                      '&tproject_id=' . $gui->tproject_id;
 
 
   $gui->fileUploadURL = $_SESSION['basehref'] . $req_spec_mgr->getFileUploadRelativeURL($gui->req_spec_id,$gui->tproject_id);

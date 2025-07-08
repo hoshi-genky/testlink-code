@@ -53,7 +53,7 @@ Ext.onReady(function(){
 /* All this stuff is needed for logic contained in inc_del_onclick.tpl */
 function delete_req(btn, text, o_id)
 { 
-  var my_action=fRoot+'lib/requirements/reqEdit.php?doAction=doDelete&requirement_id=';
+  var my_action=fRoot+'lib/requirements/reqEdit.php?doAction=doDelete&tproject_id={$gui->tproject_id}&requirement_id=';
   if( btn == 'yes' )
   {
     my_action = my_action+o_id;

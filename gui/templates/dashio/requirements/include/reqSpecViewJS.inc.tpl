@@ -4,7 +4,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
 *}
 <script type="text/javascript">
 /* All this stuff is needed for logic contained in inc_del_onclick.tpl */
-var del_action=fRoot+'{$req_module}reqSpecEdit.php?doAction=doDelete&req_spec_id=';
+var del_action=fRoot+'{$req_module}reqSpecEdit.php?doAction=doDelete&tproject_id={$gui->tproject_id}&req_spec_id=';
 var log_box_title = "{$labels.commit_title|escape:'javascript'}";
 var log_box_text = "{$labels.please_add_revision_log|escape:'javascript'}";
 

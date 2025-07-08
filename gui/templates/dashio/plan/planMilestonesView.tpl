@@ -17,7 +17,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
 {* Configure Actions *}
 {$managerURL = $gui->managerURL}
 {$editAction="$managerURL&doAction=edit"}
-{$deleteAction="$managerURL&doAction=doDelete&id="}
+{$deleteAction="$managerURL&doAction=doDelete&tproject_id={$gui->tproject_id}&id="}
 {$createAction="$managerURL&doAction=create&tplan_id="}
 
 {lang_get s='warning_delete_milestone' var="warning_msg" }

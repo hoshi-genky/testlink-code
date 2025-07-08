@@ -17,7 +17,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
 {* Configure Actions *}
 {$managerURL = $gui->managerURL}
 {$editAction = "$managerURL&doAction=edit&tplan_id="}
-{$deleteAction = "$managerURL&doAction=doDelete&tplan_id="}
+{$deleteAction = "$managerURL&doAction=doDelete&tproject_id={$gui->tproject_id}&tplan_id="}
 {$createAction = "$managerURL&doAction=create&tplan_id="}
 
 

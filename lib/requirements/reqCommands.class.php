@@ -491,7 +491,11 @@ class reqCommands {
     
     foreach($guiObj->all_reqs as $key => $req) 
     {
-      $count = count($this->reqMgr->get_coverage($req['id']));
+      if ($this->reqMgr->get_coverage($req['id']) != NULL){
+        $count = count($this->reqMgr->get_coverage($req['id']));
+      }else{
+        $count = 0;
+      }
       $guiObj->all_reqs[$key]['coverage_percent'] =
         round(100 / $guiObj->all_reqs[$key]['expected_coverage'] * $count, 2);
       $guiObj->all_reqs[$key]['coverage'] = $count;

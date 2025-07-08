@@ -214,6 +214,7 @@ function init_args()
 {
   $args = new stdClass();
   $args->tprojectPrefix = isset($_GET['tprojectPrefix']) ? $_GET['tprojectPrefix'] : null;
+  $args->tproject_id = isset($_GET['tproject_id']) ? $_GET['tproject_id'] : null;
   $args->id = isset($_GET['id']) ? $_GET['id'] : null;
 
   $args->anchor = isset($_GET['anchor']) ? $_GET['anchor'] : null;
@@ -230,10 +231,10 @@ function init_args()
  */
 function buildLink(&$argsObj)
 {
-  
   // link => $item . $id . $version . $tprojectPrefix . '&load' . $anchor;
   $lk = isset($_GET['item']) ? "item=" . $_GET['item'] : '';
   $lk .= isset($_GET['id']) ? "&id=" . urlencode($_GET['id']) : '';
+  $lk .= isset($_GET['tproject_id']) ? "&tproject_id=" . urlencode($_GET['tproject_id']) : '';
   $lk .= isset($_GET['version']) ? "&version=" . $_GET['version'] : '';
   $lk .= isset($_GET['tprojectPrefix']) ? "&tprojectPrefix=" . urlencode($_GET['tprojectPrefix']) : '';
   $lk .= '&load' . (isset($_GET['anchor']) ? '&anchor=' . $_GET['anchor'] : "");
@@ -308,7 +309,7 @@ function process_req(&$dbHandler, $docID, $tprojectID, $tprojectPrefix, $version
     if (is_null($version_id)) 
     {
       // add direct link to current version to output
-      $req_url = $_SESSION['basehref'] . 'linkto.php?load&tprojectPrefix=' .
+      $req_url = $_SESSION['basehref'] . 'linkto1.php?load&tprojectPrefix=' .
                  urlencode($tprojectPrefix) . '&item=req&id=' . urlencode($docID);
       $ret['msg'] = sprintf(lang_get('req_version_not_found'), $version, $docID, $tprojectPrefix);
       $ret['msg'] .= sprintf(" <a href=\"$req_url\">%s</a>", lang_get('direct_link_on_wrong_version'));

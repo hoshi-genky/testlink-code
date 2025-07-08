@@ -20,42 +20,42 @@ Purpose: view a requirement specification
 {$reqSpecID=$gui->req_spec_id}
 {$req_module='lib/requirements/'}
 
-{$context="&tproject_id={$gui->tproject_id}&tplan_id={$gui->tplan_id}"}
+{$context="&tproject_id={$gui->tproject_id}&tplan_id={$gui->tplan_id}&tproject_id={$gui->tproject_id}"}
 
 {$url_args="reqEdit.php?doAction=create&req_spec_id={$gui->req_spec_id}"}
 {$req_edit_url="$basehref$req_module$url_args$context"}
 
-{$url_args="reqImport.php?req_spec_id={$gui->req_spec_id}"}
+{$url_args="reqImport.php?req_spec_id={$gui->req_spec_id}&tproject_id={$gui->tproject_id}"}
 {$req_import_url="$basehref$req_module$url_args$context"}
 
-{$url_args="reqExport.php?req_spec_id={$gui->req_spec_id}"}
+{$url_args="reqExport.php?req_spec_id={$gui->req_spec_id}&tproject_id={$gui->tproject_id}"}
 {$req_export_url="$basehref$req_module$url_args$context"}
 
-{$url_args="reqImport.php?scope=branch&req_spec_id={$gui->req_spec_id}"}
+{$url_args="reqImport.php?scope=branch&req_spec_id={$gui->req_spec_id}&tproject_id={$gui->tproject_id}"}
 {$req_spec_import_url="$basehref$req_module$url_args$context"}
 
-{$url_args="reqExport.php?scope=branch&req_spec_id={$gui->req_spec_id}"}
+{$url_args="reqExport.php?scope=branch&req_spec_id={$gui->req_spec_id}&tproject_id={$gui->tproject_id}"}
 {$req_spec_export_url="$basehref$req_module$url_args$context"}
 
-{$url_args="reqEdit.php?doAction=reorder&req_spec_id={$gui->req_spec_id}"}
+{$url_args="reqEdit.php?doAction=reorder&req_spec_id={$gui->req_spec_id}&tproject_id={$gui->tproject_id}"}
 {$req_reorder_url="$basehref$req_module$url_args$context"}
 
 {$url_args="reqEdit.php?doAction=createTestCases&req_spec_id={$gui->req_spec_id}"}
 {$req_create_tc_url="$basehref$req_module$url_args$context"}
 
-{$url_args="reqSpecEdit.php?doAction=createChild&parentID={$gui->req_spec_id}"}
+{$url_args="reqSpecEdit.php?doAction=createChild&parentID={$gui->req_spec_id}&tproject_id={$gui->tproject_id}"}
 {$req_spec_new_url="$basehref$req_module$url_args$context"}
 
-{$url_args="reqSpecEdit.php?doAction=copyRequirements&req_spec_id={$gui->req_spec_id}"}
+{$url_args="reqSpecEdit.php?doAction=copyRequirements&req_spec_id={$gui->req_spec_id}&tproject_id={$gui->tproject_id}"}
 {$req_spec_copy_req_url="$basehref$req_module$url_args$context"}
 
-{$url_args="reqSpecEdit.php?doAction=copy&req_spec_id={$gui->req_spec_id}"}
+{$url_args="reqSpecEdit.php?doAction=copy&req_spec_id={$gui->req_spec_id}&tproject_id={$gui->tproject_id}"}
 {$req_spec_copy_url="$basehref$req_module$url_args$context"}
 
-{$url_args="reqCreateFromIssueMantisXML.php?scope=branch&req_spec_id={$gui->req_spec_id}"}
+{$url_args="reqCreateFromIssueMantisXML.php?scope=branch&req_spec_id={$gui->req_spec_id}&tproject_id={$gui->tproject_id}"}
 {$req_create_from_issue_xml_url="$basehref$req_module$url_args$context"}
 
-{$url_args="reqSpecEdit.php?doAction=bulkReqMon&req_spec_id={$gui->req_spec_id}"}
+{$url_args="reqSpecEdit.php?doAction=bulkReqMon&req_spec_id={$gui->req_spec_id}&tproject_id={$gui->tproject_id}"}
 {$req_spec_bulk_req_mon_url="$basehref$req_module$url_args$context"}
 
 
