@@ -329,7 +329,8 @@ viewer for test case in test specification
            name="tcPrinterFriendly" id="tcPrinterFriendly"
            value="{$tcView_viewer_labels.btn_print_view}" 
            onclick="javascript:openPrintPreview('tc',{$args_testcase.testcase_id},{$args_testcase.id},null,
-           '{$printTestCaseAction}');"/>
+           '{$printTestCaseAction}',
+           {$gui->tproject_id});"/>
   </form>
 </span>
 

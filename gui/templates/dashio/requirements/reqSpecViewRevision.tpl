@@ -65,7 +65,8 @@ function tip4log(itemID)
 	<form method="post" action="" name="reqSpecPrinterFriendly">
 		<input type="button" name="printerFriendly" value="{$labels.btn_print_view}"
 		       onclick="javascript:openPrintPreview('reqSpec',{$gui->item.parent_id},{$gui->item.id},-1,
-		                                            'lib/requirements/reqSpecPrint.php');"/>
+		                                            'lib/requirements/reqSpecPrint.php',
+													{$gui->tproject_id});"/>
 	</form>
 </div>
 <table class="simple">

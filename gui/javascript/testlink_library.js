@@ -1622,7 +1622,7 @@ function openReqRevisionWindow(item_id, anchor)
  * @param revision_id only used for requirements, null in case of testcases
  * @param print_action target url to open in popup
  */
-function openPrintPreview(type, id, child_id, revision, print_action) {
+function openPrintPreview(type, id, child_id, revision, print_action, tproject_id) {
   // configure window size using cookies or default values if there are no cookies
   var width = getCookie("ReqPopupWidth");
   var height = getCookie("ReqPopupHeight");
@@ -1665,6 +1665,7 @@ function openPrintPreview(type, id, child_id, revision, print_action) {
     break;
 
   }
+  feature_url += "&tproject_id=" + tproject_id;
 
   windowCfg = "width="+width+",height="+height+",resizable=yes,scrollbars=yes,toolbar=yes,dependent=yes,menubar=yes";
   window.open(fRoot+feature_url,"_blank",windowCfg); // TODO localize "Print Preview"!

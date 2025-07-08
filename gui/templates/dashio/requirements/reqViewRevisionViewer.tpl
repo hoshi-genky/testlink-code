@@ -29,7 +29,8 @@ viewer for requirement
 	<form method="post" action="" name="reqPrinterFriendly">
 		<input type="button" name="printerFriendly" value="{$labels.btn_print_view}"
 		       onclick="javascript:openPrintPreview('req',{$args_req.id},{$args_req.version_id},
-		                                          {$args_req.revision},'lib/requirements/reqPrint.php');"/>
+		                                          {$args_req.revision},'lib/requirements/reqPrint.php',
+												  {$gui->tproject_id});"/>
 	</form>
 </div>
 

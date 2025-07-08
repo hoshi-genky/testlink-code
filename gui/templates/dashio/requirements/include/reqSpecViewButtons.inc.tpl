@@ -90,7 +90,8 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
          name="printerFriendly" id="printerFriendly"
          value="{$labels.btn_print_view}"
          onclick="javascript:openPrintPreview('reqSpec',{$args_reqspec_id},-1,-1,
-         'lib/requirements/reqSpecPrint.php');"/>
+         'lib/requirements/reqSpecPrint.php',
+         {$gui->tproject_id});"/>
 
     </fieldset>
   </form>

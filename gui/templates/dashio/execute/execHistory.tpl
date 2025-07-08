@@ -115,7 +115,8 @@ function load_notes(panel,exec_id)
             <td class="icon_cell" align="center">
               <img src="{$tlImages.steps}" title="{$labels.access_test_steps_exec}"  
                    onclick="javascript:openPrintPreview('exec',{$tcv_exec.execution_id},
-                                                        null,null,'{$printExecutionAction}');"/>
+                                                        null,null,'{$printExecutionAction}',
+                                                        {$gui->tproject_id});"/>
             </td>
           {/if}
 

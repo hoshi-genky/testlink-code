@@ -335,7 +335,7 @@ viewer for test case in test specification
 
           <form style="display: inline;" id="tcprint" name="tcprint" method="post" action="" >
             {* button type="button" -> to avoid automatic SUBMIT *}
-            <button type="button" style="border:0;" onclick="javascript:openPrintPreview('tc',{$args_testcase.testcase_id},{$args_testcase.id},null,'{$printTestCaseAction}');">
+            <button type="button" style="border:0;" onclick="javascript:openPrintPreview('tc',{$args_testcase.testcase_id},{$args_testcase.id},null,'{$printTestCaseAction}',{$gui->tproject_id});">
               <i class="fa fa-eye" style="padding:1px 6px;" name="tcPrinterFriendly" title="{$tcView_viewer_labels.btn_print_view}"> プレビュー </i>
             </button>
           </form>

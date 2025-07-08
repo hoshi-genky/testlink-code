@@ -135,7 +135,8 @@ viewer for requirement
 
     <input class="{#BUTTON_CLASS#}" type="button" name="printerFriendly" value="{$labels.btn_print_view}" 
            onclick="javascript:openPrintPreview('req',{$args_req.id},{$args_req.version_id},
-                                                {$args_req.revision},'lib/requirements/reqPrint.php');"/>
+                                                {$args_req.revision},'lib/requirements/reqPrint.php',
+                                                {$gui->tproject_id});"/>
     {if $args_grants->monitor_req == "yes"}
     	<input class="{#BUTTON_CLASS#}" type="submit" name="monitor" 
           value="{$gui->btn_monitor_mgmt}" 
