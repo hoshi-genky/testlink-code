@@ -132,6 +132,7 @@ viewer for requirement
      action="{$basehref}lib/requirements/reqEdit.php" name="reqPrinterFriendly">
     <input type="hidden" id="rpfReqID" name="requirement_id" value="{$req_id}" />
     <input type="hidden" id="rpfAction" name="doAction" value="" />
+    <input type="hidden" name="tproject_id" value="{$gui->tproject_id}" />
 
     <input class="{#BUTTON_CLASS#}" type="button" name="printerFriendly" value="{$labels.btn_print_view}" 
            onclick="javascript:openPrintPreview('req',{$args_req.id},{$args_req.version_id},
