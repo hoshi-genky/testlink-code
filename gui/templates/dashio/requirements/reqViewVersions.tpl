@@ -67,7 +67,7 @@ function delete_req(btn, text, o_id)
  */
 function delete_req_version(btn, text, o_id)
 { 
-  var my_action=fRoot+'lib/requirements/reqEdit.php?doAction=doDeleteVersion&req_version_id=';
+  var my_action=fRoot+'lib/requirements/reqEdit.php?doAction=doDeleteVersion&tproject_id={$gui->tproject_id}&req_version_id=';
   if( btn == 'yes' )
   {
     my_action = my_action+o_id;
@@ -81,7 +81,7 @@ function delete_req_version(btn, text, o_id)
  */
 function freeze_req_version(btn, text, o_id)
 {
-  var my_action=fRoot+'lib/requirements/reqEdit.php?doAction=doFreezeVersion&req_version_id=';
+  var my_action=fRoot+'lib/requirements/reqEdit.php?doAction=doFreezeVersion&tproject_id={$gui->tproject_id}&req_version_id=';
   if( btn == 'yes' )
   {
     my_action = my_action+o_id;
@@ -95,7 +95,7 @@ function freeze_req_version(btn, text, o_id)
  */
 function unfreeze_req_version(btn, text, o_id)
 {
-  var my_action=fRoot+'lib/requirements/reqEdit.php?doAction=doUnfreezeVersion&req_version_id=';
+  var my_action=fRoot+'lib/requirements/reqEdit.php?doAction=doUnfreezeVersion&tproject_id={$gui->tproject_id}&req_version_id=';
   if( btn == 'yes' )
   {
     my_action = my_action+o_id;
