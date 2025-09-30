@@ -97,6 +97,12 @@ if ($args->id) {
                     ON TPL.id = E.testplan_id
                     WHERE E.id = {$attParent}"; 
             $rs = $db->get_recordset($sql);
+            // 不具合修正 https://it-redmine.genky-aws.com/issues/13735
+            $ctx = array('tproject_id' => $rs[0]['testproject_id'],
+                         'tplan_id' => $rs[0]['testplan_id'],
+                         'checkPublicPrivateAttr' => true);
+            $ck = array('testplan_execute','exec_ro_access',
+                        'exec_testcases_assigned_to_me');
           break;
 
           case 'tcversions':
