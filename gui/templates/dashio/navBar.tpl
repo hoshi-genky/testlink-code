@@ -61,6 +61,7 @@ The _top value of the target attribute specifies that the URL should open in the
           method="post">
        {$labels.testproject}
       <select style="font-size: 120%;position:relative; top:-1px;" 
+        class="tproject_id"
         name="tproject_id" onchange="this.form.submit();">
           {foreach key=item_id item=tproject_name from=$gui->testProjects}
           <option value="{$item_id}" title="{$tproject_name|escape}"
@@ -81,6 +82,7 @@ The _top value of the target attribute specifies that the URL should open in the
         {$labels.testplan}
         <input type="hidden" name="tproject_id" value="{$gui->tproject_id}">
         <select style="font-size: 120%;position:relative; top:-1px;" 
+            class="tplan_id"
             name="tplan_id" onchange="this.form.submit();">
             {foreach key=idx item=tplan from=$gui->testPlans}
             {$planID = $tplan['id']} 

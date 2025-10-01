@@ -11,7 +11,9 @@ require_once('../functions/common.php');
 require_once('../functions/attachments.inc.php');
 testlinkInitPage($db,false,false,"checkRights");
 
-$args = init_args();  
+$args = init_args();
+$gui = new stdClass();
+$gui->tproject_id = 1;// 使用しないのでダミーをセットする
 $deleteDone = false;
 if ($args->id)
 {

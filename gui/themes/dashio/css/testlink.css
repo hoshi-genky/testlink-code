@@ -186,6 +186,10 @@ select.menu_combo {
 	font-weight:    bold;
 }
 
+select.tplan_id,
+select.tproject_id{
+	max-width: 300px;
+}
 
 /* ***** Main page specific ***************************************** */
 
