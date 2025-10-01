@@ -32,6 +32,7 @@ if ($args->id)
 }
 
 $smarty = new TLSmarty();
+$smarty->assign('gui',$gui);
 $smarty->assign('bDeleted',$deleteDone);
 $smarty->display('attachmentdelete.tpl');
 
