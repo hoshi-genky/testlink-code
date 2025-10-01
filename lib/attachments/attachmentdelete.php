@@ -14,6 +14,7 @@ testlinkInitPage($db,false,false,"checkRights");
 $args = init_args();
 $gui = new stdClass();
 $gui->tproject_id = 1;// 使用しないのでダミーをセットする
+$gui->tplan_id = 1;// 使用しないのでダミーをセットする
 $deleteDone = false;
 if ($args->id)
 {
