@@ -38,7 +38,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
             <div class="border-head">
               <h3 style="border-bottom: 0px; 
                          margin-bottom: 0px;
-                         padding-bottom: 0px;">{$gui->tc_monthly_creation_rate_on_tproj|escape}</h3>
+                         padding-bottom: 0px;">{$gui->tc_monthly_creation_rate_on_tproj}</h3>
               <h5 style="border-bottom: 1px solid #c9cdd7;">{$labels.tc_monthly_creation_rate_on_tproj_hint|escape}</h5>
               <br>
             </div>
