@@ -859,7 +859,10 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     font-weight: 300;
 }
 div.border-head h3 .project_name{
-  background-color: #ff0;
+  font-weight: bold;
+  background-color: #ffb;
+  color: #44f;
+  padding: 5px;  
 }
 
 .custom-bar-chart {
