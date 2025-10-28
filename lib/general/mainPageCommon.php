@@ -46,7 +46,7 @@ function main(&$db,&$args) {
   $gui->testPriorityEnabled = $gui->tprjOpt->testPriorityEnabled;
   $gui->tc_monthly_creation_rate_on_tproj = 
     lang_get('tc_monthly_creation_rate_on_tproj') . ' - ' .
-    testproject::getName($db,$gui->tproject_id);
+    '<span class="project_name">' . testproject::getName($db,$gui->tproject_id) . '</span>';
 
   ////echo '<br>' . __FILE__ . '> ' . __LINE__;
 

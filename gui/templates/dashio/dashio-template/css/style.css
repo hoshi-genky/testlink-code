@@ -858,6 +858,9 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     width: 100%;
     font-weight: 300;
 }
+div.border-head h3 .project_name{
+  background-color: #ff0;
+}
 
 .custom-bar-chart {
     height: 290px;

@@ -4222,6 +4222,11 @@ $TLS_requirements_design = '要件 設計';
 $TLS_testcase_execution = 'テストケース 実施';
 $TLS_reports = 'テストレポート';
 
+$TLS_tc_monthly_creation_rate_on_tproj =
+  '月間テストケース増加数 on テストケース';
+$TLS_tc_monthly_creation_rate_on_tproj_hint =
+  '(based on latest test case version creation date)';
+
 
 $TLS_search_words_or = '検索が、少なくとも単語に一致する必要があります (または)';
 $TLS_search_words_and = '検索が、すべての単語に一致する必要があります (かつ)';
