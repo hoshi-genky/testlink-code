@@ -437,6 +437,11 @@ function launch_outer_exec(&$tplMgr,$argsObj)
   {
     $gui->titleframe .= '&testproject=' . $argsObj->tproject_id;
   } 
+  if( $argsObj->tplan_id > 0)
+  {
+    $gui->titleframe .= '&tplan_id=' . $argsObj->tplan_id;
+  } 
+  
   $gui->title = lang_get('main_page_title');
   $gui->mainframe = 'ltx.php?' . build_link_exec($argsObj);
 
