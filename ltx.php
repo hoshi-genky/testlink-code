@@ -212,6 +212,7 @@ function process_exec(&$dbHandler,$context)
   $ret['url'] = "lib/execute/execSetResults.php?level=testcase" .
                 "&version_id=" . $context['tcversion_id'] . 
                 "&id=" . $info['parent_id'] . 
+                "&tproject_id=" . $context['tproject_id'] .
                 "&setting_testplan=" . $context['setting_testplan'] .
                 "&setting_build=" . $context['setting_build'] .
                 "&setting_platform=" . $context['setting_platform'];
@@ -347,7 +348,8 @@ function launch_inner_exec(&$dbHandler,&$tplMgr)
     }  
 
     $op['status_ok'] = true;
-  } 
+    $args->tproject_id = $info['tproject_id'];
+  }
 
   if($op['status_ok'])
   {
@@ -355,6 +357,7 @@ function launch_inner_exec(&$dbHandler,&$tplMgr)
     $pfn = 'process_' . $args->item;
 
     $ctx = array();
+    $ctx['tproject_id'] = $args->tproject_id;
     $ctx['setting_testplan'] = $args->tplan_id;
     $ctx['setting_build'] = $args->build_id;
     $ctx['setting_platform'] = $args->platform_id;
@@ -371,6 +374,7 @@ function launch_inner_exec(&$dbHandler,&$tplMgr)
   {
     $treeframe = $itemCode[$args->item] .
                  '?loadExecDashboard=0' . 
+                 '&tproject_id=' . $args->tproject_id .
                  '&setting_testplan=' . $args->tplan_id .
                  '&setting_build=' . $args->build_id .
                  '&setting_platform=' . $args->platform_id;

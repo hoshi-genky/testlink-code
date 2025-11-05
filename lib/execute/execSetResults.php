@@ -1761,8 +1761,10 @@ function processTestCase($tcase,&$guiObj,&$argsObj,&$cfgObj,$tcv,&$treeMgr,&$tca
   $guiObj->direct_link = 
     trim($_SESSION['basehref'],'/') . 
     "/ltx.php?item=exec&feature_id=" . $lk[0]['feature_id'] .
-    "&build_id=" . $argsObj->build_id;
-
+    "&build_id=" . $argsObj->build_id . 
+    "&tproject_id=" . $argsObj->tproject_id . 
+    "&tplan_id=" . $argsObj->tplan_id
+    ;
   $argsObj->direct_link = $guiObj->direct_link;
 
 
