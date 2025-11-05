@@ -215,7 +215,9 @@ function initializeGui(&$dbHandler,&$argsObj,&$cfgObj,&$tplanMgr) {
   // custom fields for test plan can be edited ONLY on design, that's reason why we are using 
   // scope = 'design' instead of 'execution'
   $gui->testplan_cfields = $tplanMgr->html_table_of_custom_field_values(
-    $argsObj->tplan_id,'design',array('show_on_execution' => 1));
+    $argsObj->tplan_id,
+    $argsObj->tproject_id,
+    'design',array('show_on_execution' => 1));
     
 
   $gui->build_cfields = $buildMgr->html_table_of_custom_field_values(
