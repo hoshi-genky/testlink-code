@@ -53,6 +53,14 @@ $tcversion_id = null;
 $submitResult = null;
 list($args,$its,$cts) = init_args($db,$cfg);
 
+if(isset($_REQUEST['setting_build'])){
+  $args->build_id = $_REQUEST['setting_build'];
+}
+if(isset($_REQUEST['setting_testplan'])){
+  $args->tplan_id = $_REQUEST['setting_testplan']; 
+}
+
+
 $smarty = new TLSmarty();
 $smarty->assign('tsuite_info',null);
 
@@ -1575,7 +1583,9 @@ function initializeGui(&$dbHandler,&$argsObj,&$cfgObj,&$tplanMgr,&$tcaseMgr,&$is
   // custom fields for test plan can be edited ONLY on design, that's reason why we are using 
   // scope = 'design' instead of 'execution'
   $gui->testplan_cfields = $tplanMgr->html_table_of_custom_field_values(
-                           $argsObj->tplan_id,'design',
+                           $argsObj->tplan_id,
+                           $argsObj->tproject_id,
+                           'design',
                            array('show_on_execution' => 1));
     
   $gui->build_cfields = $buildMgr->html_table_of_custom_field_values(

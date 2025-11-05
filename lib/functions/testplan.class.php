@@ -2499,7 +2499,7 @@ class testplan extends tlObjectWithAttachments
     } 
 
     if (0 == $tproject_id) {
-      throw new Exception(__FUNCTION_ . " - BAD Test Project ID", 1);
+      throw new Exception(__FUNCTION__ . " - BAD Test Project ID", 1);
       die();
     }
 
@@ -2626,10 +2626,12 @@ class testplan extends tlObjectWithAttachments
          20080811 - franciscom - BUGID 1650 (REQ)
          20070701 - franciscom - fixed return string when there are no custom fields.
   */
-  function html_table_of_custom_field_values($id,$scope='design',$filters=null,$formatOptions=null)
+  function html_table_of_custom_field_values($id,
+        $tproject_id,
+        $scope='design',$filters=null,$formatOptions=null)
   {
     $cf_smarty='';
-    $parent_id=null;
+    $parent_id=$tproject_id;
     $label_css_style=' class="labelHolder" ' ;
     $value_css_style = ' ';
 
