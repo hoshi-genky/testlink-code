@@ -276,14 +276,14 @@ function saveImportedTCData(&$db,$tcData,$tproject_id,$container_id,
         $stepCount = count($steps);
         for($sidx=0; $sidx < $stepCount; $sidx++)
         {
-            foreach( ["actions","expected_results"] as $name ){
-              if( !isset($steps[$sidx][$name]) || is_null($steps[$sidx][$name]) )
+            foreach( ["actions","expected_results"] as $_name ){
+              if( !isset($steps[$sidx][$_name]) || is_null($steps[$sidx][$_name]) )
               {
-                  $steps[$sidx][$name] = '';
+                  $steps[$sidx][$_name] = '';
               }
-              $steps[$sidx][$name] = strip_tags($steps[$sidx][$name], $avoids);
+              $steps[$sidx][$_name] = strip_tags($steps[$sidx][$_name], $avoids);
             }
-        }
+        }     
     }
     $doCreate = true;
     if( $duplicatedLogic['actionOnHit'] == 'update_last_version' || 
