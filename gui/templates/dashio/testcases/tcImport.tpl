@@ -84,7 +84,7 @@ Purpose: smarty template - manage import of test cases and test suites
 	</div>
 </form>
   <br><br>
-  <h3><a href="/download/import_export.xls">インポート/エクポート XML-Excel変換</a></h3>
+  <h3><a href="/testlink/download/import_export.xls">インポート/エクポート XML-Excel変換</a></h3>
 
 {else}
   {foreach item=result from=$gui->resultMap}
