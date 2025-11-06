@@ -270,7 +270,21 @@ function saveImportedTCData(&$db,$tcData,$tproject_id,$container_id,
     $name = $tc['name'];
     $summary = $tc['summary'];
     $steps = $tc['steps'];
-
+    if(is_array($steps))
+    {// escape steps content
+        $avoids = ['p','a','u','em','sup','ul','li','ol','blockquote','h1','h2','h3','h4','big','small'];
+        $stepCount = count($steps);
+        for($sidx=0; $sidx < $stepCount; $sidx++)
+        {
+            foreach( ["actions","expected_results"] as $name ){
+              if( !isset($steps[$sidx][$name]) || is_null($steps[$sidx][$name]) )
+              {
+                  $steps[$sidx][$name] = '';
+              }
+              $steps[$sidx][$name] = strip_tags($steps[$sidx][$name], $avoids);
+            }
+        }
+    }
     $doCreate = true;
     if( $duplicatedLogic['actionOnHit'] == 'update_last_version' || 
         $duplicatedLogic['actionOnHit'] == 'skip' ) {
@@ -991,7 +1005,7 @@ function getKeywordsFromSimpleXMLObj($simpleXMLItems)
   
 */
 function importTestSuitesFromSimpleXML(&$dbHandler,&$xml,$parentID,$tproject_id,
-                     $userID,$kwMap,$importIntoProject = 0,$duplicateLogic)
+                     $userID,$kwMap,$importIntoProject = 0,$duplicateLogic = null)
 {
   static $tsuiteXML;
   static $tsuiteMgr;
