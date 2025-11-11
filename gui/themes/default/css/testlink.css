@@ -1233,7 +1233,7 @@ div .cke_contents  {
 	min-height:180px;
 }
 
-.label.bug_add{
+.exec_test_spec .label {
 	color: #88f;
 }
 /* ----- END ------------------------------------------------------------------------- */
