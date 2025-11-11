@@ -66,7 +66,7 @@ Purpose: smarty template - create new testcase
          
     {/if}
     {$layout1}
-    {include file="testcases/attributesLinear.inc.tpl"}
+    {include file="testcases/include/attributesLinear.inc.tpl"}
   </div>
 
 
