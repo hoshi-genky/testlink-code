@@ -1232,4 +1232,8 @@ tr.tr_param:last-child{
 	border-bottom: 1px solid #000;
 }
 
+.label.bug_add{
+	color: #88f;
+}
+
 /* ----- END ------------------------------------------------------------------------- */

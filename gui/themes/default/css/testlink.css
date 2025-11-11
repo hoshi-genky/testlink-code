@@ -1232,5 +1232,9 @@ body.cke_editable p{
 div .cke_contents  {
 	min-height:180px;
 }
+
+.label.bug_add{
+	color: #88f;
+}
 /* ----- END ------------------------------------------------------------------------- */
 

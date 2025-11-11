@@ -33,7 +33,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
       <a style="font-weight:normal" target="_blank" href="{$gui->issueTrackerCfg->createIssueURL}">
       {$labels.link_bts_create_bug}({$gui->issueTrackerCfg->VerboseID|escape})</a>
       </p>  
-      <p class="label">{$gui->issueTrackerCfg->VerboseType|escape} {$labels.bug_id}
+      <p class="label bug_add">{$gui->issueTrackerCfg->VerboseType|escape} {$labels.bug_id}
         <input type="text" id="bug_id" name="bug_id" required value="{$gui->bug_id}"
                size="{#BUGID_SIZE#}" maxlength="{$gui->issueTrackerCfg->bugIDMaxLength}" 
                {if $gui->user_action == 'add_note'} readonly {/if} />
@@ -42,7 +42,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     {/if}
 
     {if $gui->user_action == 'create' || $gui->user_action == 'doCreate' }
-      <p class="label">{$labels.bug_summary}(*)
+      <p class="label bug_add">{$labels.bug_summary}(*)
         <input type="text" id="bug_summary" name="bug_summary" required value="{$gui->bug_summary}"
                size="{#BUGSUMMARY_SIZE#}" maxlength="{$gui->issueTrackerCfg->bugSummaryMaxLength}" 
       </p>
@@ -57,7 +57,7 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
     {/if}
 
     {if $gui->issueTrackerCfg->tlCanAddIssueNote || $gui->user_action == 'create' || $gui->user_action == 'doCreate'}
-      <span class="label"><img src="{$tlImages.info}" title="{$labels.hint_bug_notes}">{$labels.notes}</span>
+      <span class="label bug_add"><img src="{$tlImages.info}" title="{$labels.hint_bug_notes}">{$labels.notes}</span>
         <textarea id="bug_notes" name="bug_notes" 
                   rows="{#BUGNOTES_ROWS#}" cols="{#BUGNOTES_COLS#}" >{$gui->bug_notes}</textarea>
     {/if}    
@@ -66,11 +66,11 @@ TestLink Open Source Project - http://testlink.sourceforge.net/
       <br><br>
       <input type="checkbox" name="addLinkToTL" id="addLinkToTL"
       {if $gui->addLinkToTLChecked} checked {/if} >
-      <span class="label">{$labels.add_link_to_tlexec}</span>
+      <span class="label bug_add">{$labels.add_link_to_tlexec}</span>
       <br>
       <input type="checkbox" name="addLinkToTLPrintView" id="addLinkToTLPrintView"
       {if $gui->addLinkToTLPrintViewChecked} checked {/if} >
-      <span class="label">{$labels.add_link_to_tlexec_print_view}</span>
+      <span class="label bug_add">{$labels.add_link_to_tlexec_print_view}</span>
     {/if}
 
     <div class="groupBtn">
