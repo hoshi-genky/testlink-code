@@ -332,10 +332,11 @@ function write_execution(&$db,&$execSign,&$exec_data,&$issueTracker) {
         if( isset($exec_data['issueForStep']) ) {
           $addIssueOp['type'] = 'issueForStep'; 
           foreach($exec_data['issueForStep'] as $stepID => $val) {
-            $addl = completeIssueForStep($execContext,$execSign,$exec_data,
+            $opt = completeIssueForStep($execContext,$execSign,$exec_data,
                                          $stepID);
+                                        
             $addIssueOp['issueForStep'][$stepID] = 
-              addIssue($db,$execContext,$issueTracker,$addl);
+              addIssue($db,$execContext,$issueTracker,$opt);
           }
         }  
       } // $itCheckOK
@@ -979,10 +980,11 @@ function completeIssueForStep(&$execContext,$execSigfrid,$exData,$stepID) {
 
   $addLink = false;
   if( property_exists($execSigfrid, 'addLinkToTLForStep') ) {
-    $addLink = isset($execSigfrid->addLinkToTLForStep[$stepID]);
+    if(isset($execSigfrid->addLinkToTLForStep[$stepID])){
+      $addLink = true;
+    }
   }
-
-  return $addLink;
+  return array("addLinkToTL" => $addLink );
 }
 
 

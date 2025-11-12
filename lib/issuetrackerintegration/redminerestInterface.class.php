@@ -320,9 +320,12 @@ class redminerestInterface extends issueTrackerInterface
     $reporter = null;
     if(!is_null($opt) && property_exists($opt, 'reporter')) {
       $reporter = $opt->reporter;
-    }  
-
-
+    }
+    $execContext = null;
+    if(!is_null($opt) && property_exists($opt, 'execContext')) {
+      $execContext = $opt->execContext;
+    }
+    
   	// Check mandatory info
   	if( !property_exists($this->cfg,'projectidentifier') ) {
   	  throw new exception(__METHOD__ . " project identifier is MANDATORY");
@@ -340,7 +343,16 @@ class redminerestInterface extends issueTrackerInterface
 
       // limit size to redmine max => 255 ?
       $issueXmlObj->addChild('subject', substr(htmlspecialchars($summary),0,255) );
-      $issueXmlObj->addChild('description', htmlspecialchars($description));
+
+      $desc = htmlspecialchars($description);
+
+      if(!is_null($reporter)){
+        $desc .= "\r\n 報告者: {$reporter}";
+      }
+      /*if(!is_null($execContext)){
+        $desc .= "\r\n" . print_r($execContext, true);
+      }
+      $issueXmlObj->addChild('description', $desc);*/
 
       // Got from XML Configuration
       // improvement
