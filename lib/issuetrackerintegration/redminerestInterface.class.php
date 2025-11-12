@@ -355,8 +355,20 @@ class redminerestInterface extends issueTrackerInterface
 
       if( property_exists($this->cfg,'trackerid') ) {
         $issueXmlObj->addChild('tracker_id', (string)$this->cfg->trackerid);
-      } 
-
+      }else{
+        $issueXmlObj->addChild('tracker_id', "1");
+      }
+      if( property_exists($this->cfg,'assigned_to_id') ) {
+        $issueXmlObj->addChild('assigned_to_id', (string)$this->cfg->assigned_to_id);
+      }else{
+        $issueXmlObj->addChild('assigned_to_id', "1");
+      }
+      if( property_exists($this->cfg,'due_date_days') ) {
+        $issueXmlObj->addChild('due_date', date("Y-m-d", strtotime("+{$this->cfg->due_date_days} day")));
+      }else{
+        $issueXmlObj->addChild('due_date', date("Y-m-d", strtotime("+7 day")));
+      }      
+      
       // try to be generic
       if( property_exists($this->cfg,'parent_issue_id') ) {
         $issueXmlObj->addChild('parent_issue_id', (string)$this->cfg->parent_issue_id);

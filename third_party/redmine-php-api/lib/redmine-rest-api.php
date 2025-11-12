@@ -440,8 +440,8 @@ class redmine
     {
       throw new exception(__METHOD__ . "url:$this->url" .
                           ' - XRedmineSwitchUser:' . $XRedmineSwitchUser . 
-                          ' - response:' . json_encode($response) . 
-                          ' - content: ' . json_encode($content) );
+                          ' - response:' . $response . 
+                          ' - content: ' . $content );
     }
     
     $rr = array('content' => $content,'response' => $response,'curlError' => $curlError);
