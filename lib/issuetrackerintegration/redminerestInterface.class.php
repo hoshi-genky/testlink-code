@@ -351,8 +351,8 @@ class redminerestInterface extends issueTrackerInterface
       }
       /*if(!is_null($execContext)){
         $desc .= "\r\n" . print_r($execContext, true);
-      }
-      $issueXmlObj->addChild('description', $desc);*/
+      }*/
+      $issueXmlObj->addChild('description', $desc);
 
       // Got from XML Configuration
       // improvement
